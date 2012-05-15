@@ -3,7 +3,7 @@
  * The loop that displays posts. 
  * DUE FOR A RECODE AS I WANT MY OWN
  * @package WordPress
- * @subpackage Ollomedia
+ * @subpackage #themeName
  */
 ?>
 

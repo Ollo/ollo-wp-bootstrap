@@ -8,7 +8,7 @@
  * located in the functions.php file.
  *
  * @package WordPress
- * @subpackage Ollomedia
+ * @subpackage #themeName
  */
 ?>
 

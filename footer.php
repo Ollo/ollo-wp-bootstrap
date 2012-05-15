@@ -6,7 +6,7 @@
  * after.  Calls sidebar-footer.php for bottom widgets.
  *
  * @package WordPress
- * @subpackage Ollomedia
+ * @subpackage #themeName
  */
 ?>
 

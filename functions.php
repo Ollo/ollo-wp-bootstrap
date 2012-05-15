@@ -1,7 +1,7 @@
 <?php
 /**
  * @package WordPress
- * @subpackage Ollomedia
+ * @subpackage #themeName
  */
 
 if ( ! isset( $content_width ) )

@@ -5,7 +5,7 @@
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package WordPress
- * @subpackage Ollomedia
+ * @subpackage #themeName
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>

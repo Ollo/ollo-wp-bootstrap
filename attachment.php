@@ -3,7 +3,7 @@
  * The template for displaying attachments.
  *
  * @package WordPress
- * @subpackage Ollomedia
+ * @subpackage #themeName
  */
 
 get_header(); ?>
