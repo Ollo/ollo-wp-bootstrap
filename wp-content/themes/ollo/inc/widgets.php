@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * Register widgetized areas, including two sidebars and four widget-ready columns in the footer.
 */
