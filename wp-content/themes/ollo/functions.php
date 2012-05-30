@@ -3,8 +3,12 @@
  * @package WordPress
  * @subpackage #themeName
  */
- 
+
+
+// load includes to keep functions simple if possible  
 require_once('inc/post-types.php');
+require_once('inc/scripts.php');
+
 
 if ( ! isset( $content_width ) )
 	$content_width = 640;
