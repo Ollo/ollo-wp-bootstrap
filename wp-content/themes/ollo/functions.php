@@ -89,15 +89,6 @@ function ollomedia_filter_wp_title( $title, $separator ) {
 add_filter( 'wp_title', 'ollomedia_filter_wp_title', 10, 2 );
 
 /**
- * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
- */
-function ollomedia_page_menu_args( $args ) {
-	$args['show_home'] = true;
-	return $args;
-}
-add_filter( 'wp_page_menu_args', 'ollomedia_page_menu_args' );
-
-/**
  * Sets the post excerpt length to 40 characters.
  */
 function ollomedia_excerpt_length( $length ) {
