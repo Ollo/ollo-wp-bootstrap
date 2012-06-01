@@ -29,6 +29,13 @@ body {
 
 h1 {
 	font-size: 3.500em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* header / navbar */
+
+#access {
+	border-bottom: 1px solid #000;
 }
 
 /* home page */
@@ -41,8 +48,8 @@ h1 {
 	padding:25px 0 0 ;
 	margin:0 auto;
 }
+
 .introMsg {
-	font-family: Helvetica-Nueue, Arial, sans-serif;
 	font-weight:100;
 	text-align:center;
 	line-height:1.5;
