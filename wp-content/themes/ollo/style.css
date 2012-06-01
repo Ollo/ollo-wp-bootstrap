@@ -10,3 +10,8 @@ Tags: one column, blue, modern, custom post types
 @import "css/reset.css";
 @import "css/bootstrap.css";
 
+/* structure */
+
+#wrapper {
+	margin-top:40px;
+}

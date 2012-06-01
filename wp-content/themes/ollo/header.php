@@ -23,19 +23,18 @@
 	wp_head();
 ?>
 </head>
-
 <body <?php body_class(); ?>>
-
-	
 
 	<div id="access" role="navigation" class="navbar navbar-fixed-top">
 	    <div class="navbar-inner">
-	        <div class="container">
-    	        <h1><a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+	        <div class="container-fluid">
+	            <div id="header">
+    	            <h1><a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 	    
-    		    <?php wp_nav_menu( array( 'container_class' => '', 'theme_location' => 'primary', 'menu_class' => 'nav right' ) ); ?>
+        		    <?php wp_nav_menu( array( 'container_class' => ' ', 'theme_location' => 'primary', 'menu_class' => 'nav right' ) ); ?>
+    		    </div>
     		</div>    
 		</div>
-	</div><!-- #access -->
-	
+	</div>
+<div id="wrapper">	
 	
