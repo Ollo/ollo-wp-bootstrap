@@ -10,8 +10,47 @@ Tags: one column, blue, modern, custom post types
 @import "css/reset.css";
 @import "css/bootstrap.css";
 
+body {
+	font-family: Helvetica, arial, sans-serif;
+	font-size:12px;
+}
+
+
 /* structure */
 
 #wrapper {
 	margin-top:40px;
+}
+#content {
+	padding:0;
+}
+
+/* headings */
+
+h1 {
+	font-size: 3.500em;
+}
+
+/* home page */
+
+#intro {
+	display: block;
+	background: url('img/introBg.png') repeat-x;
+	color:#fff;
+	height:268px;
+	padding:25px 0 0 ;
+	margin:0 auto;
+}
+.introMsg {
+	font-family: Helvetica-Nueue, Arial, sans-serif;
+	font-weight:100;
+	text-align:center;
+	line-height:1.5;
+}
+
+#homeWork {
+	
+}
+#homeWords {
+	
 }
