@@ -60,6 +60,13 @@ h1 {
 #homeWork {
 	
 }
+#workInner { 
+	margin:0 auto;
+	padding:15px 50px 15px 200px;
+}
+#workMsg {
+	margin:0 20px 0 0;
+}
 #homeWords {
 	
 }
