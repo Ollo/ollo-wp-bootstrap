@@ -37,7 +37,7 @@
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
   color: #333333;
   background-color: #ffffff;
@@ -247,11 +247,11 @@ a:hover {
 p {
   margin: 0 0 9px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
 }
 p small {
-  font-size: 11px;
+  font-size: 10px;
   color: #999999;
 }
 .lead {
@@ -455,7 +455,7 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 12px;
+  font-size: 11px;
   color: #333333;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -471,7 +471,7 @@ pre {
   display: block;
   padding: 8.5px;
   margin: 0 0 9px;
-  font-size: 12.025px;
+  font-size: 11.100000000000001px;
   line-height: 18px;
   word-break: break-all;
   word-wrap: break-word;
@@ -510,7 +510,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 27px;
-  font-size: 19.5px;
+  font-size: 18px;
   line-height: 36px;
   color: #333333;
   border: 0;
@@ -525,7 +525,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: normal;
   line-height: 18px;
 }
@@ -549,7 +549,7 @@ select,
   height: 18px;
   padding: 4px;
   margin-bottom: 9px;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
   color: #555555;
   background-color: #ffffff;
@@ -2000,7 +2000,7 @@ button.close {
   *zoom: 1;
   padding: 4px 10px 4px;
   margin-bottom: 0;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
   *line-height: 20px;
   color: #333333;
@@ -2091,7 +2091,7 @@ button.close {
 }
 .btn-large {
   padding: 9px 14px;
-  font-size: 15px;
+  font-size: 14px;
   line-height: normal;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2102,7 +2102,7 @@ button.close {
 }
 .btn-small {
   padding: 5px 9px;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 16px;
 }
 .btn-small [class^="icon-"] {
@@ -2110,7 +2110,7 @@ button.close {
 }
 .btn-mini {
   padding: 2px 6px;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 14px;
 }
 .btn-primary,
@@ -2866,17 +2866,10 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-inner {
   min-height: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #2c2c2c;
-  background-image: -moz-linear-gradient(top, #333333, #222222);
-  background-image: -ms-linear-gradient(top, #333333, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
-  background-image: -webkit-linear-gradient(top, #333333, #222222);
-  background-image: -o-linear-gradient(top, #333333, #222222);
-  background-image: linear-gradient(top, #333333, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
+  padding-left: 50px;
+  padding-right: 50px;
+  /*#gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);*/
+
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -2891,7 +2884,7 @@ input[type="submit"].btn.btn-mini {
   height: auto;
 }
 .navbar {
-  color: #999999;
+  color: #ffffff;
 }
 .navbar .brand:hover {
   text-decoration: none;
@@ -2904,17 +2897,17 @@ input[type="submit"].btn.btn-mini {
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
-  color: #999999;
+  color: #ffffff;
 }
 .navbar .navbar-text {
   margin-bottom: 0;
   line-height: 40px;
 }
 .navbar .navbar-link {
-  color: #999999;
+  color: #ffffff;
 }
 .navbar .navbar-link:hover {
-  color: #ffffff;
+  color: #eeeeee;
 }
 .navbar .btn,
 .navbar .btn-group {
@@ -2960,48 +2953,44 @@ input[type="submit"].btn.btn-mini {
 .navbar-form .input-prepend input {
   margin-top: 0;
 }
-.navbar-search {
-  position: relative;
-  float: left;
-  margin-top: 6px;
-  margin-bottom: 0;
+/*
+// Navbar search
+//.navbar-search {
+//  position: relative;
+//  float: left;
+//  .navbarVerticalAlign(28px); // Vertically center in navbar
+//  margin-bottom: 0;
+//  .search-query {
+//    padding: 4px 9px;
+//    #font > .sans-serif(13px, normal, 1);
+//    color: @white;
+//    background-color: @navbarSearchBackground;
+//    border: 1px solid @navbarSearchBorder;
+//    .box-shadow(~"inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15)");
+//    .transition(none);
+//
+    // Placeholder text gets special styles; can't be a grouped selector
+    &:-moz-placeholder {
+      color: @navbarSearchPlaceholderColor;
+    }
+    &::-webkit-input-placeholder {
+      color: @navbarSearchPlaceholderColor;
+    }
+
+    // Focus states (we use .focused since IE7-8 and down doesn't support :focus)
+    &:focus,
+    &.focused {
+      padding: 5px 10px;
+      color: @grayDark;
+      text-shadow: 0 1px 0 @white;
+      background-color: @navbarSearchBackgroundFocus;
+      border: 0;
+      .box-shadow(0 0 3px rgba(0,0,0,.15));
+      outline: 0;
+    }
+  }
 }
-.navbar-search .search-query {
-  padding: 4px 9px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  font-weight: normal;
-  line-height: 1;
-  color: #ffffff;
-  background-color: #626262;
-  border: 1px solid #151515;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
-  -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-.navbar-search .search-query:-moz-placeholder {
-  color: #cccccc;
-}
-.navbar-search .search-query::-webkit-input-placeholder {
-  color: #cccccc;
-}
-.navbar-search .search-query:focus,
-.navbar-search .search-query.focused {
-  padding: 5px 10px;
-  color: #333333;
-  text-shadow: 0 1px 0 #ffffff;
-  background-color: #ffffff;
-  border: 0;
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  outline: 0;
-}
+*/
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
@@ -3046,7 +3035,7 @@ input[type="submit"].btn.btn-mini {
   float: none;
   padding: 9px 10px 11px;
   line-height: 19px;
-  color: #999999;
+  color: #ffffff;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -3062,21 +3051,20 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav > li > a:hover {
   background-color: transparent;
-  color: #ffffff;
+  color: #eeeeee;
   text-decoration: none;
 }
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
-  color: #ffffff;
+  color: #eeeeee;
   text-decoration: none;
-  background-color: #222222;
 }
 .navbar .divider-vertical {
   height: 40px;
   width: 1px;
   margin: 0 9px;
   overflow: hidden;
-  background-color: #222222;
+  background-color: url('img/headerBg.png') repeat-x;
   border-right: 1px solid #333333;
 }
 .navbar .nav.pull-right {
@@ -3089,36 +3077,9 @@ input[type="submit"].btn.btn-mini {
   padding: 7px 10px;
   margin-left: 5px;
   margin-right: 5px;
-  background-color: #2c2c2c;
-  background-image: -moz-linear-gradient(top, #333333, #222222);
-  background-image: -ms-linear-gradient(top, #333333, #222222);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#333333), to(#222222));
-  background-image: -webkit-linear-gradient(top, #333333, #222222);
-  background-image: -o-linear-gradient(top, #333333, #222222);
-  background-image: linear-gradient(top, #333333, #222222);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-  border-color: #222222 #222222 #000000;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #222222;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075);
-}
-.navbar .btn-navbar:hover,
-.navbar .btn-navbar:active,
-.navbar .btn-navbar.active,
-.navbar .btn-navbar.disabled,
-.navbar .btn-navbar[disabled] {
-  background-color: #222222;
-  *background-color: #151515;
-}
-.navbar .btn-navbar:active,
-.navbar .btn-navbar.active {
-  background-color: #080808 \9;
 }
 .navbar .btn-navbar .icon-bar {
   display: block;
@@ -3668,7 +3629,7 @@ a.thumbnail:hover {
 }
 .label,
 .badge {
-  font-size: 10.998px;
+  font-size: 10.152px;
   font-weight: bold;
   line-height: 14px;
   color: #ffffff;

@@ -3,23 +3,19 @@
 * Custom Post types for our theme 
 *
 */
-
-// sample that needs mod for portfolio post type 
-
-/*
-function register_splash_posts() {
+function register_portfolio_posts() {
 
 	$labels = array(
-		'name' => _x('Splash Posts', 'post type general name'),
-		'singular_name' => _x('Splash Page', 'post type singular name'),
-		'add_new' => _x('Add New', 'Splash Post'),
-		'add_new_item' => __('Add New Splash Post'),
-		'edit_item' => __('Edit Splash Post'),
-		'new_item' => __('New Splash Post'),
-		'view_item' => __('View Splash Post'),
-		'search_items' => __('Search Splash Post'),
-		'not_found' =>  __('No Splash Post Found'),
-		'not_found_in_trash' => __('No Splash Post Found In Trash'),
+		'name' => _x('Portfolio Posts', 'post type general name'),
+		'singular_name' => _x('Portfolio Page', 'post type singular name'),
+		'add_new' => _x('Add New', 'Portfolio Post'),
+		'add_new_item' => __('Add New Portfolio Post'),
+		'edit_item' => __('Edit Portfolio Post'),
+		'new_item' => __('New Portfolio Post'),
+		'view_item' => __('View Portfolio Post'),
+		'search_items' => __('Search Portfolio Post'),
+		'not_found' =>  __('No Portfolio Post Found'),
+		'not_found_in_trash' => __('No Portfolio Post Found In Trash'),
 		'parent_item_colon' => ''
 	);
 
@@ -30,18 +26,19 @@ function register_splash_posts() {
 		'show_ui' => true,
 		'query_var' => true,
 		//'menu_icon' => get_stylesheet_directory_uri() . '/eventicon.png', <- include this line to add custom icons for menu item
+		'menu_position' => 5,
 		'rewrite' => true,
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
-		'supports' => array('title','editor','thumbnail','custom-fields')
+		'supports' => array('title','editor','thumbnail','custom-fields','excerpt'),
+		'rewrite' => array('slug' => 'work')
 	  );
 
-	register_post_type( 'splash' , $args );
+	register_post_type( 'portfolio' , $args );
 
 }
 
-add_action ('init', 'register_splash_posts');
+add_action ('init', 'register_portfolio_posts');
 
-*/
 ?>

@@ -36,6 +36,7 @@ h1 {
 
 #access {
 	border-bottom: 1px solid #000;
+	background: url('img/headerBg.png') repeat-x;
 }
 
 /* home page */
@@ -44,8 +45,8 @@ h1 {
 	display: block;
 	background: url('img/introBg.png') repeat-x;
 	color:#fff;
-	height:268px;
-	padding:25px 0 0 ;
+	height:auto;
+	padding:15px 0 ;
 	margin:0 auto;
 }
 
@@ -53,6 +54,7 @@ h1 {
 	font-weight:100;
 	text-align:center;
 	line-height:1.5;
+	text-shadow: 2px 2px 2px #000;
 }
 
 #homeWork {
