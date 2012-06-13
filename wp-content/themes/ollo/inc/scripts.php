@@ -13,11 +13,14 @@ if(!is_admin()){
     // modernizer for html5 goodnes 
     wp_register_script('modernizer', get_bloginfo('template_directory') .'/js/modernizr.js','jquery'); 
     wp_enqueue_script('modernizer'); 
+    
+    // google pretify
+    wp_register_script('prettyprint', get_bloginfo('template_directory') .'/js/prettify.js','jquery'); 
+    wp_enqueue_script('prettyprint');
 
     // bootstrap stuff 
     wp_register_script('carousel', get_bloginfo('template_directory') .'/js/bootstrap-carousel.js','jquery'); 
     wp_enqueue_script('carousel');
-
 
 
     // the main js file to house local functions 

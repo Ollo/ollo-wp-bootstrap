@@ -1,10 +1,9 @@
 /*
 Theme Name: Ollomedia 
 Theme URI: http://ollomedia.com
-Description: I'm always working on themes and this is the fourth design for my personal site
+Description: A custom wordpress theme built with Twitter Bootstrap
 Version: 4.0
-Author: Joshua Ray  
-Tags: one column, blue, modern, custom post types 
+Author: Joshua Ray
 */
 
 @import "css/reset.css";
@@ -13,16 +12,22 @@ Tags: one column, blue, modern, custom post types
 body {
 	font-family: Helvetica, arial, sans-serif;
 	font-size:12px;
+	background: url('img/workBg.png') 100%;
 }
-
 
 /* structure */
 
 #wrapper {
 	margin-top:40px;
 }
+
 #content {
 	padding:0;
+}
+
+.inner {
+	width:960px;
+	margin:0 auto;
 }
 
 /* headings */
@@ -50,6 +55,10 @@ h1 {
 	margin:0 auto;
 }
 
+#introContent {
+	margin:0 auto;
+}
+
 .introMsg {
 	font-weight:100;
 	text-align:center;
@@ -58,15 +67,106 @@ h1 {
 }
 
 #homeWork {
-	
+
 }
+
 #workInner { 
 	margin:0 auto;
-	padding:15px 50px 15px 200px;
 }
+
 #workMsg {
 	margin:0 20px 0 0;
 }
 #homeWords {
 	
+}
+
+/* pretify styles */
+
+.str {
+    color: #EC7600;
+}
+.kwd {
+    color: #93C763;
+}
+.com {
+    color: #66747B;
+}
+.typ {
+    color: #678CB1;
+}
+.lit {
+    color: #FACD22;
+}
+.pun {
+    color: #F1F2F3;
+}
+.pln {
+    color: #F1F2F3;
+}
+.tag {
+    color: #8AC763;
+}
+.atn {
+    color: #E0E2E4;
+}
+.atv {
+    color: #EC7600;
+}
+.dec {
+    color: purple;
+}
+pre.prettyprint {
+    border: 0px solid #888;
+}
+ol.linenums {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.prettyprint {
+    background: #000;
+}
+li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9 {
+    color: #555;
+    list-style-type: decimal;
+}
+li.L1, li.L3, li.L5, li.L7, li.L9 {
+    background: #111;
+}
+@media print
+{
+    .str {
+        color: #060;
+    }
+    .kwd {
+        color: #006;
+        font-weight: bold;
+    }
+    .com {
+        color: #600;
+        font-style: italic;
+    }
+    .typ {
+        color: #404;
+        font-weight: bold;
+    }
+    .lit {
+        color: #044;
+    }
+    .pun {
+        color: #440;
+    }
+    .pln {
+        color: #000;
+    }
+    .tag {
+        color: #006;
+        font-weight: bold;
+    }
+    .atn {
+        color: #404;
+    }
+    .atv {
+        color: #060;
+    }
 }
