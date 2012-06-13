@@ -7,7 +7,6 @@ get_header();
 
 ?>
 
-<div id="content" class="container-fluid">
     <section id="intro" class="row-fluid">
         <div id="introContent" class="inner">
             <?php
@@ -28,14 +27,14 @@ get_header();
     </section>
     <section id="homeWork" class="row-fluid">
         <div id="workInner" class="inner clearfix">
-            <div id="workMsg" class="left">
+            <div id="workMsg" class="column left">
                 <h1>RECENT WORK</h1>
                 <p>Donec sed odio dui. Sed posuere consectetur est at lobortis. Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur.
 
                 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
             </div>
             
-            <div id="workSlider" class="carousel slide right">
+            <div id="workSlider" class="carousel slide  column right">
             <?php 
                 $args = array(
                     'post_count' => 5,
@@ -78,20 +77,5 @@ get_header();
     <section id="homeWords">
         
     </section>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php get_footer(); ?>

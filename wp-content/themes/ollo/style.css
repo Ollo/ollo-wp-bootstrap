@@ -21,13 +21,13 @@ body {
 	margin-top:40px;
 }
 
-#content {
-	padding:0;
-}
-
 .inner {
 	width:960px;
 	margin:0 auto;
+}
+
+.column {
+	width:48%;
 }
 
 /* headings */
@@ -49,34 +49,35 @@ h1 {
 #intro {
 	display: block;
 	background: url('img/introBg.png') repeat-x;
-	color:#fff;
-	height:auto;
-	padding:15px 0 ;
-	margin:0 auto;
+	color: #fff;
+	height: auto;
+	padding: 15px 0;
+	margin: 0 auto;
 }
 
 #introContent {
-	margin:0 auto;
+
 }
 
 .introMsg {
-	font-weight:100;
-	text-align:center;
-	line-height:1.5;
+	font-weight: 100;
+	text-align: center;
+	line-height: 1.5;
 	text-shadow: 2px 2px 2px #000;
 }
 
 #homeWork {
-
+	padding: 15px 0;
 }
 
 #workInner { 
-	margin:0 auto;
+
 }
 
 #workMsg {
-	margin:0 20px 0 0;
+
 }
+
 #homeWords {
 	
 }

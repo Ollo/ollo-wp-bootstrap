@@ -10,3 +10,5 @@ wp-content/plugins/.DS_Store
 wp-content/themes/.DS_Store
 
 .htaccess
+
+.DS_Store
