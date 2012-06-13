@@ -19,10 +19,9 @@
 
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
-	if ( is_singular() && get_option( 'thread_comments' ) )
-	wp_enqueue_script( 'comment-reply' );
 
 	wp_head();
+
 ?>
 </head>
 <body <?php body_class(); ?>>
