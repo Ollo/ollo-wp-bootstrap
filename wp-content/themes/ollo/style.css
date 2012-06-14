@@ -6,6 +6,16 @@ Version: 4.0
 Author: Joshua Ray
 */
 
+/* colors
+
+Navy = #092740
+
+Gray = #
+
+Light Blue = #
+
+*/
+
 @import "css/reset.css";
 @import "css/bootstrap.css";
 
@@ -80,6 +90,9 @@ h1 {
 
 #homeWords {
 	
+}
+#footer {
+	background: #092740;
 }
 
 /* pretify styles */

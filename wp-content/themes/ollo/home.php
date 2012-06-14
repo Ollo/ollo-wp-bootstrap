@@ -75,6 +75,9 @@ get_header();
     </section>
     
     <section id="homeWords">
+        <div class="inner">
+            
+        </div>
         
     </section>
 
