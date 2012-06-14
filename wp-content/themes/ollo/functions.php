@@ -41,7 +41,7 @@ function ollomedia_setup() {
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
+	// set up wp_nav_menu() add more as needed 
 	register_nav_menus( array(
 		'primary' => __( 'Primary Navigation', 'ollomedia' ),
 	) );
@@ -89,12 +89,28 @@ function ollomedia_filter_wp_title( $title, $separator ) {
 add_filter( 'wp_title', 'ollomedia_filter_wp_title', 10, 2 );
 
 /**
- * Sets the post excerpt length to 40 characters.
+ * function for custom excerpt link based on input passed 
  */
-function ollomedia_excerpt_length( $length ) {
-	return 40;
+function print_excerpt($length) {
+	global $post;
+	$text = $post->post_excerpt;
+	if ( '' == $text ) {
+		$text = get_the_content('');
+		$text = apply_filters('the_content', $text);
+		$text = str_replace(']]>', ']]>', $text);
+	}
+	$text = strip_shortcodes($text);
+	$text = strip_tags($text,'<p><a>');
+	//$text = strip_tags($text); // use ' $text = strip_tags($text,'<p><a>'); ' if you want to keep some tags
+
+	$text = substr($text,0,$length);
+	$excerpt = reverse_strrchr($text, '.', 1);
+	if( $excerpt ) {
+		echo apply_filters('the_excerpt',$excerpt);
+	} else {
+		echo apply_filters('the_excerpt',$text);
+	}
 }
-add_filter( 'excerpt_length', 'ollomedia_excerpt_length' );
 
 /**
  * Returns a "Continue Reading" link for excerpts
