@@ -2,7 +2,7 @@
 /**
  * The main template file.
  * @package WordPress
- * @subpackage #themeName
+ * @subpackage ollomedia
  */
 
 get_header(); ?>

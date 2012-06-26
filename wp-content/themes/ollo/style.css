@@ -10,7 +10,7 @@ Author: Joshua Ray
 
 Navy = #092740
 
-Gray = #
+Dark Gray = #464646
 
 Light Blue = #
 
@@ -41,6 +41,11 @@ body {
 }
 
 /* headings */
+.heading {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	line-height: 1.5;
+}
 
 h1 {
 	font-size: 3.500em;
@@ -85,14 +90,22 @@ h1 {
 }
 
 #workMsg {
-
 }
 
 #homeWords {
+	height:auto;
+	padding: 15px 0;
+	background: #464646;
+	border-top: 1px solid #fff;
+	border-bottom:1px solid #ccc;
+	margin:0 auto;
+	box-shadow: 0 2px 2px #464646;
+	color:#fff;
 	
 }
 #footer {
 	background: #092740;
+	height:100%;
 }
 
 /* pretify styles */

@@ -3,7 +3,7 @@
  * The template for displaying all pages.
  *
  * @package WordPress
- * @subpackage #themeName
+ * @subpackage ollomedia
  */
 
 get_header(); ?>
@@ -17,8 +17,8 @@ get_header(); ?>
 					<?php } ?>				
 
 						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
-						<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
+						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'ollomedia' ), 'after' => '' ) ); ?>
+						<?php edit_post_link( __( 'Edit', 'ollomedia' ), '', '' ); ?>
 
 				<?php comments_template( '', true ); ?>
 

@@ -3,13 +3,13 @@
  * The template for displaying Tag Archive pages.
  *
  * @package WordPress
- * @subpackage #themeName
+ * @subpackage ollomedia
  */
 
 get_header(); ?>
 
 				<h1><?php
-					printf( __( 'Tag Archives: %s', 'twentyten' ), '' . single_tag_title( '', false ) . '' );
+					printf( __( 'Tag Archives: %s', 'ollomedia' ), '' . single_tag_title( '', false ) . '' );
 				?></h1>
 
 <?php

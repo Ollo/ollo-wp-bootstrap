@@ -25,7 +25,6 @@ function register_portfolio_posts() {
 		'publicly_queryable' => true,
 		'show_ui' => true,
 		'query_var' => true,
-		//'menu_icon' => get_stylesheet_directory_uri() . '/eventicon.png', <- include this line to add custom icons for menu item
 		'menu_position' => 5,
 		'rewrite' => true,
 		'capability_type' => 'post',

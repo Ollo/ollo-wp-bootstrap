@@ -3,7 +3,7 @@
  * The Footer widget areas.
  *
  * @package WordPress
- * @subpackage #themeName
+ * @subpackage ollomedia
  */
 ?>
 

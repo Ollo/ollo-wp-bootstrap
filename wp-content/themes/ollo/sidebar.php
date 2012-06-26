@@ -3,7 +3,7 @@
  * The Sidebar containing the primary and secondary widget areas.
  *
  * @package WordPress
- * @subpackage #themeName
+ * @subpackage ollomedia
  */
 ?>
 
@@ -22,14 +22,14 @@
 			</li>
 
 			<li>
-				<h3><?php _e( 'Archives', 'twentyten' ); ?></h3>
+				<h3><?php _e( 'Archives', 'ollomedia' ); ?></h3>
 				<ul>
 					<?php wp_get_archives( 'type=monthly' ); ?>
 				</ul>
 			</li>
 
 			<li>
-				<h3><?php _e( 'Meta', 'twentyten' ); ?></h3>
+				<h3><?php _e( 'Meta', 'ollomedia' ); ?></h3>
 				<ul>
 					<?php wp_register(); ?>
 					<li><?php wp_loginout(); ?></li>

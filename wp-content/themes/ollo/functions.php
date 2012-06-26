@@ -1,9 +1,8 @@
 <?php
 /**
  * @package WordPress
- * @subpackage #themeName
+ * @subpackage ollomedia
  */
-
 
 // load includes to keep functions simple if possible  
 require_once('inc/post-types.php');
