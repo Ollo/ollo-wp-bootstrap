@@ -110,6 +110,9 @@ function print_excerpt($length) {
 		echo apply_filters('the_excerpt',$text);
 	}
 }
+function reverse_strrchr($haystack, $needle, $trail) {
+    return strrpos($haystack, $needle) ? substr($haystack, 0, strrpos($haystack, $needle) + $trail) : false;
+}
 
 /**
  * Returns a "Continue Reading" link for excerpts

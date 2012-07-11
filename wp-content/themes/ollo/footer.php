@@ -9,13 +9,14 @@
  * @subpackage ollomedia
  */
 ?>
-    <section id="footer">
+</div><!-- close wrapper -->
+    <div class="push"></div>
+    <section id="footer">        
         <div class="inner">
 		    <a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 		    <a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress </a>
 		</div>
     </section>
-</div><!-- close wrapper -->
 <?php
 
 	wp_footer();
