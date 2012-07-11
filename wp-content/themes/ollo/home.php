@@ -10,9 +10,6 @@ get_header();
     <section id="intro" class="row-fluid">
         <div id="introContent" class="inner">
             <?php
-                // The Query
-                query_posts();
-
                     // The Loop
                     while ( have_posts() ) : the_post();
                     	the_content();
@@ -26,7 +23,6 @@ get_header();
     <section id="homeWork" class="row-fluid">
         <div id="workInner" class="inner clearfix">
             <div id="workMsg" class="column left">
-                <h1 class="heading">RECENT WORK</h1>
                 <?php 
                     $args = array(
                         'pagename' => 'work'
@@ -38,6 +34,7 @@ get_header();
                     // The Loop
                     while ( $workPage_query->have_posts() ) : $workPage_query->the_post();
                     ?>
+                    <h1 class="heading"><a href="<?php the_permalink(); ?>">RECENT WORK</a></h1>
                     <p><?php print_excerpt(400); ?></p>
                     
                     <?php    

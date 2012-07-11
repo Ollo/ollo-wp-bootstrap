@@ -47,8 +47,9 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #005580;
-  text-decoration: underline;
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: 2px 2px 2px #000;
 }
 .row {
   margin-left: -20px;
@@ -2733,8 +2734,8 @@ input[type="submit"].btn.btn-mini {
 }
 .nav-tabs .dropdown-toggle:hover .caret,
 .nav-pills .dropdown-toggle:hover .caret {
-  border-top-color: #005580;
-  border-bottom-color: #005580;
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 .nav-tabs .active .dropdown-toggle .caret,
 .nav-pills .active .dropdown-toggle .caret {
