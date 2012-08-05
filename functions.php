@@ -48,14 +48,14 @@ function ollomedia_setup() {
 }
 endif;
 
+// custom images 
+add_image_size( 'homepage-thumb', 400, 400 );
+
 function ollomedia_filter_wp_title( $title, $separator ) {
 	// Don't affect wp_title() calls in feeds.
 	if ( is_feed() )
 		return $title;
 
-	// The $paged global variable contains the page number of a listing of posts.
-	// The $page global variable contains the page number of a single post that is paged.
-	// We'll display whichever one applies, if we're not looking at the first page.
 	global $paged, $page;
 
 	if ( is_search() ) {

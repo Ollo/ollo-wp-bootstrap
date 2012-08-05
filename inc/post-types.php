@@ -30,7 +30,7 @@ function register_portfolio_posts() {
 		'capability_type' => 'post',
 		'hierarchical' => false,
 		'menu_position' => null,
-		'supports' => array('title','editor','thumbnail','custom-fields','excerpt'),
+		'supports' => array('title','editor','thumbnail','excerpt'),
 		'rewrite' => array('slug' => 'work')
 	  );
 

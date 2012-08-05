@@ -40,7 +40,7 @@ body {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -55px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto -33px; /* the bottom margin is the negative value of the footer's height */
 }
 
 .inner {
@@ -112,26 +112,39 @@ h1 {
 #homeWork .heading:hover {
 	color:#fff;
 }
-#workInner { 
-
-}
-
-#workMsg {
-}
 
 #homeWords {
-	height:auto;
-	padding: 15px 0;
-	background: #464646;
+	min-height:100%;
+	background: #a3a3a3;
 	border-top: 1px solid #fff;
 	border-bottom:1px solid #ccc;
-	margin:0 auto;
 	box-shadow: 0 2px 2px #464646;
 	color:#fff;
-	
+}
+#wordsInner {
+	padding: 15px 0;
 }
 #homeWords .heading:hover {
 	color:#333;
+}
+
+.featuredImgL, .featuredImgR  {
+	margin-left: 20px;
+	padding:10px;
+	background:#fff;
+	border:1px solid #a3a3a3;
+}
+.featuredImgR:hover {
+	box-shadow: 2px 2px 3px #a3a3a3;
+	transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);
+}
+.featuredImgL:hover {
+	box-shadow: 2px 2px 3px #666;
+	transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	-webkit-transform: rotate(-1deg);
 }
 /* Footer 
 ================ */
@@ -142,7 +155,7 @@ h1 {
 	margin-top:35px;
 }
 
-.credits { margin:20px 0 0; }
+.credits {font-size:15px; margin:20px 0 0; }
 
 .credits a { color:#a3a3a3; }	
 .credits a:hover {
