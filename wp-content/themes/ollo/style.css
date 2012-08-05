@@ -1,0 +1,236 @@
+/*
+Theme Name: Ollomedia 
+Theme URI: http://ollomedia.com
+Description: A custom wordpress theme built with Twitter Bootstrap
+Version: 4.0
+Author: Joshua Ray
+*/
+
+@import "css/reset.css";
+@import "css/bootstrap.css";
+
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: Helvetica, arial, sans-serif;
+	font-size:12px;
+	background: url('img/workBg.png') 100%;
+}
+
+::selection {
+	background:#fff;
+	color:#000; /* Safari */
+	}
+::-moz-selection {
+	background:#fff;
+	color:#000; /* Firefox */
+} 
+
+
+/* structure */
+
+#wrapper {
+	padding-top:40px;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -25px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.inner {
+	width:960px;
+	margin:0 auto;
+}
+
+.column {
+	width:48%;
+}
+
+.pageIntro {
+	padding: 0 0 20px;
+}
+
+/* headings */
+.heading {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 3.500em;
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* header / navbar */
+
+#access {
+	border-bottom: 1px solid #000;
+	background: url('img/headerBg.png') repeat-x;
+}
+
+/* home page */
+
+#intro {
+	display: block;
+	background: url('img/introBg.png') repeat-x;
+	color: #fff;
+	height: auto;
+	padding: 15px 0;
+	margin: 0 auto;
+}
+
+.introMsg {
+	font-weight: 100;
+	text-align: center;
+	line-height: 1.5;
+	text-shadow: 2px 2px 2px #000;
+}
+
+#homeWork {
+	padding: 15px 0;
+}
+
+#workInner { 
+
+}
+
+#workMsg {
+}
+
+#homeWords {
+	height:auto;
+	padding: 15px 0;
+	background: #464646;
+	border-top: 1px solid #fff;
+	border-bottom:1px solid #ccc;
+	margin:0 auto;
+	box-shadow: 0 2px 2px #464646;
+	color:#fff;
+	
+}
+#footer {
+	background: #092740;
+}
+.push {
+	display:none; /* fix for gap on homepage */	
+}
+#footer, .push {
+	height: 25px; /* .push must be the same height as .footer */
+}
+
+/* work page styles */ 
+#workPageContent {
+	margin: 25px auto;
+	color:#fff;
+}
+#workPageInner {
+	background:#666;
+	border:1px solid #fff;
+	border-radius:7px;
+	padding:20px;	
+}
+.single {
+	width: 33%;
+	padding: 0 10px;
+}
+
+.workThumb img {
+	border:5px solid #ececec;
+}
+
+/* pretify styles */
+
+.str {
+    color: #EC7600;
+}
+.kwd {
+    color: #93C763;
+}
+.com {
+    color: #66747B;
+}
+.typ {
+    color: #678CB1;
+}
+.lit {
+    color: #FACD22;
+}
+.pun {
+    color: #F1F2F3;
+}
+.pln {
+    color: #F1F2F3;
+}
+.tag {
+    color: #8AC763;
+}
+.atn {
+    color: #E0E2E4;
+}
+.atv {
+    color: #EC7600;
+}
+.dec {
+    color: purple;
+}
+pre.prettyprint {
+    border: 0px solid #888;
+}
+ol.linenums {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.prettyprint {
+    background: #000;
+}
+li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9 {
+    color: #555;
+    list-style-type: decimal;
+}
+li.L1, li.L3, li.L5, li.L7, li.L9 {
+    background: #111;
+}
+@media print
+{
+    .str {
+        color: #060;
+    }
+    .kwd {
+        color: #006;
+        font-weight: bold;
+    }
+    .com {
+        color: #600;
+        font-style: italic;
+    }
+    .typ {
+        color: #404;
+        font-weight: bold;
+    }
+    .lit {
+        color: #044;
+    }
+    .pun {
+        color: #440;
+    }
+    .pln {
+        color: #000;
+    }
+    .tag {
+        color: #006;
+        font-weight: bold;
+    }
+    .atn {
+        color: #404;
+    }
+    .atv {
+        color: #060;
+    }
+}
