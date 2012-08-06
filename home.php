@@ -41,7 +41,8 @@ get_header();
             <div id="wordsInner" class="inner clearfix">
                 <div id="wordMsg" class="column right">
                     <?php
-                        $wordargs = array( 'post_type' => 'post', 'posts_per_page' => 1, 'orderby' => 'rand');
+                        $wordargs = array( 'post_type' => 'post', 'posts_per_page' => 1, 'post__in'  => get_option( 'sticky_posts' ),
+                        	'ignore_sticky_posts' => 1);
                         
                         $myposts = get_posts( $wordargs );
                         foreach( $myposts as $post ) :	setup_postdata($post); ?>

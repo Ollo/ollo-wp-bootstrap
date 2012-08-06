@@ -19,7 +19,7 @@ html, body {
 
 body {
 	font-family: Helvetica, arial, sans-serif;
-	font-size:12px;
+	font-size:13px;
 	background: url('img/workBg.png') 100%;
 }
 
@@ -55,6 +55,9 @@ body {
 .pageIntro {
 	padding: 0 0 20px;
 }
+#content {
+	margin:25px auto 20px;
+}
 
 /* headings 
 ================*/
@@ -68,10 +71,10 @@ body {
 	color:inherit;
 }
 .shadowTextDark {
-	text-shadow: 1px 1px 2px #000;
+	text-shadow: 1px 1px 2px #efefef;
 }
 .shadowTextLight {
-	text-shadow: 1px 1px 2px #fff;
+	text-shadow: 1px 1px 2px #efefef;
 }
 
 h1 {
@@ -108,31 +111,27 @@ h1 {
 
 #homeWork {
 	padding: 15px 0;
+	border-top: 1px solid #a3a3a3;
 }
 #homeWork .heading:hover {
-	color:#fff;
+	color:#666;
 }
-
 #homeWords {
-	min-height:100%;
-	background: #a3a3a3;
+	background: #cdcdcd;
 	border-top: 1px solid #fff;
-	border-bottom:1px solid #ccc;
-	box-shadow: 0 2px 2px #464646;
-	color:#fff;
-}
-#wordsInner {
-	padding: 15px 0;
-}
-#homeWords .heading:hover {
 	color:#333;
 }
-
+#wordsInner {
+	padding: 20px 0 15px;
+}
+#homeWords .heading:hover {
+	color:#666;
+}
 .featuredImgL, .featuredImgR  {
 	margin-left: 20px;
 	padding:10px;
 	background:#fff;
-	border:1px solid #a3a3a3;
+	border:1px solid #a1a1a1;
 }
 .featuredImgR:hover {
 	box-shadow: 2px 2px 3px #a3a3a3;
@@ -151,8 +150,9 @@ h1 {
 
 #footer {
 	background: url("img/footerBg.png") repeat #efefef;
+	border-top:1px solid #a3a3a3;
 	color:#a3a3a3;
-	margin-top:35px;
+	margin-top:33px;
 }
 
 .credits {font-size:15px; margin:20px 0 0; }
@@ -190,26 +190,43 @@ h1 {
 
 /* work page styles 
 =======================*/
- 
-#workPageContent {
-	margin: 25px auto;
-	color:#fff;
+#workGrid {
+	margin: 0 0 20px 0;
 }
-#workPageInner {
-	background:#666;
-	border:1px solid #fff;
-	border-radius:7px;
-	padding:20px;	
+.workSingle {
+	padding:0;
 }
-.single {
-	width: 33%;
-	padding: 0 10px;
-}
-
+.workTitle { padding-left:25px; }
 .workThumb img {
 	border:5px solid #ececec;
 }
-
+#authBio { 
+	background:#fff;
+	border:1px solid #a3a3a3;
+	border-radius:4px;
+	padding: 10px;
+	margin:0 0 20px;
+}
+/* post styles 
+===================*/
+.postCreds {
+	margin: 5px 0;
+}
+.theTags {
+	padding:5px 0 10px;
+}
+.theTags .heading {
+	padding-right:10px;
+}
+.wpContent {
+	padding:20px 0;
+}
+.wpContent img.left {
+	padding:0 20px 20px 0;
+}
+.wpContent h2, h3 {
+	display:block;
+}
 /* pretify styles 
 ===================*/
 

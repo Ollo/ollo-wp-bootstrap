@@ -49,7 +49,8 @@ function ollomedia_setup() {
 endif;
 
 // custom images 
-add_image_size( 'homepage-thumb', 400, 400 );
+add_image_size('work-thumbnail', 200, 200);
+add_image_size( 'homepage-thumb', 400, 400);
 
 function ollomedia_filter_wp_title( $title, $separator ) {
 	// Don't affect wp_title() calls in feeds.
@@ -196,11 +197,12 @@ function ollomedia_comment( $comment, $args, $depth ) {
 }
 endif;
 
-
+/*
 if ( ! function_exists( 'ollomedia_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post—date/time and author.
  */
+/*
 function ollomedia_posted_on() {
 	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'ollomedia' ),
 		'meta-prep meta-prep-author',
@@ -217,7 +219,7 @@ function ollomedia_posted_on() {
 	);
 }
 endif;
-
+*/
 if ( ! function_exists( 'ollomedia_posted_in' ) ) :
 /**
  * Prints HTML with meta information for the current post (category, tags and permalink).

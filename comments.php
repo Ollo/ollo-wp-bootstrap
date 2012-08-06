@@ -15,16 +15,8 @@
 <?php if ( post_password_required() ) : ?>
 				<p><?php _e( 'This post is password protected. Enter the password to view any comments.', 'ollomedia' ); ?></p>
 <?php
-		/* Stop the rest of comments.php from being processed,
-		 * but don't kill the script entirely -- we still have
-		 * to fully load the template.
-		 */
 		return;
 	endif;
-?>
-
-<?php
-	// You can start editing here -- including this comment!
 ?>
 
 <?php if ( have_comments() ) : ?>
@@ -41,12 +33,6 @@
 
 			<ol>
 				<?php
-					/* Loop through and list the comments. Tell wp_list_comments()
-					 * to use ollomedia_comment() to format the comments.
-					 * If you want to overload this in a child theme then you can
-					 * define ollomedia_comment() and that will be used instead.
-					 * See ollomedia_comment() in ollomedia/functions.php for more.
-					 */
 					wp_list_comments( array( 'callback' => 'ollomedia_comment' ) );
 				?>
 			</ol>
@@ -63,7 +49,7 @@
 	 */
 	if ( ! comments_open() ) :
 ?>
-	<p><?php _e( 'Comments are closed.', 'ollomedia' ); ?></p>
+	<?php _e( ' ', 'ollomedia' ); ?>
 <?php endif; // end ! comments_open() ?>
 
 <?php endif; // end have_comments() ?>

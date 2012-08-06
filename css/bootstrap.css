@@ -268,7 +268,7 @@ h5,
 h6 {
   margin: 0;
   font-family: inherit;
-  font-weight: bold;
+  font-weight: lighter;
   color: inherit;
   text-rendering: optimizelegibility;
 }
@@ -278,7 +278,7 @@ h3 small,
 h4 small,
 h5 small,
 h6 small {
-  font-weight: normal;
+  font-weight: light;
   color: #999999;
 }
 h1 {
@@ -3640,6 +3640,7 @@ a.thumbnail:hover {
 }
 .label {
   padding: 1px 4px 2px;
+  margin-right: 5px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
