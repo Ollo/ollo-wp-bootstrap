@@ -218,6 +218,8 @@ h1 {
 .theTags .heading {
 	padding-right:10px;
 }
+.theTags .label { display:inline;}
+.theTags .label a { color:#fff;}
 .wpContent {
 	padding:20px 0;
 }

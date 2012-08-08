@@ -21,8 +21,10 @@ get_header();
                         $args = array( 'post_type' => 'portfolio', 'posts_per_page' =>1, 'orderby' => 'rand');
                     
                         $workPage_query = new WP_Query( $args );
+                        
                         while ( $workPage_query->have_posts() ) : $workPage_query->the_post(); ?>
-                            <h1 class="heading shadowTextDark"><a href="<?php the_permalink(); ?>">RECENT WORK</a></h1>
+                        
+                            <h1 class="heading shadowTextDark"><a href="<?php  ?>">RECENT WORK</a></h1>
                                 <h3 class="heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <p><?php print_excerpt(600); ?></p>
                         

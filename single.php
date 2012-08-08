@@ -14,19 +14,22 @@ get_header(); ?>
     	<h4 class="postCreds heading">Posted: <?php the_date();?> By: <?php the_author(); ?></h4>
     	<div class="theTags">
     	    <h4 class="heading left">Tagged in:</h4>
-    	    <?php $posttags = get_the_tags();
-                if ($posttags) {
-                    foreach($posttags as $tag) {
-                        echo '<span class="label">' . $tag->name . '</span>'; 
-                    }
-                } 
-            ?>
+    	    <?php the_tags('<ul><li class="label">','</li><li class="label">','</li></ul>'); ?>
         </div>
         <div class="wpContent">
             <?php the_content(); ?>
         </div>
     	    <?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'ollomedia' ), 'after' => '' ) ); ?>
-
+            <hr />
+        <div class="clearfix">
+            <span class="left">
+              <?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'ollomedia' ) . ' %title' ); ?>
+            </span>
+            <span class="right">
+              <?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'ollomedia' ) . '' ); ?>
+            </span>
+        </div>
+			<hr />  
         <div id="authBio" class="span6 clearfix">
             <?php // If a user has filled out their description, show a bio on their entries ?>
             <div class="left">
@@ -44,8 +47,9 @@ get_header(); ?>
         </div>
     <div class="clearfix">        
         <div class="left">
-    		<?php comments_template( '', true ); ?>
+		    <?php comments_template( '', true ); ?>
         </div>
+        
     </div>
     <?php endwhile; // end of the loop. ?>
     </div>
