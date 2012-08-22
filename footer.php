@@ -2,15 +2,13 @@
 /**
  * The template for displaying the footer.
  *
- * Contains the closing of the id=main div and all content
- * after.  Calls sidebar-footer.php for bottom widgets.
+ * Contains the closing of the id=wrapper div and all content after
  *
  * @package WordPress
  * @subpackage ollomedia
  */
 ?>
 </div><!-- close wrapper -->
-    <div class="push"></div>
     <section id="footer">        
         <div id="footerText" class="inner clearfix">
             <div class="credits left heading">

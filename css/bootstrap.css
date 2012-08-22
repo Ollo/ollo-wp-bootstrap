@@ -37,7 +37,7 @@
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
   color: #333333;
   background-color: #ffffff;
@@ -247,11 +247,11 @@ a:hover {
 p {
   margin: 0 0 9px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
 }
 p small {
-  font-size: 10px;
+  font-size: 12px;
   color: #999999;
 }
 .lead {
@@ -455,7 +455,7 @@ code,
 pre {
   padding: 0 3px 2px;
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 11px;
+  font-size: 13px;
   color: #333333;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -471,7 +471,7 @@ pre {
   display: block;
   padding: 8.5px;
   margin: 0 0 9px;
-  font-size: 11.100000000000001px;
+  font-size: 12.950000000000001px;
   line-height: 18px;
   word-break: break-all;
   word-wrap: break-word;
@@ -510,7 +510,7 @@ legend {
   width: 100%;
   padding: 0;
   margin-bottom: 27px;
-  font-size: 18px;
+  font-size: 21px;
   line-height: 36px;
   color: #333333;
   border: 0;
@@ -525,7 +525,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 18px;
 }
@@ -549,7 +549,7 @@ select,
   height: 18px;
   padding: 4px;
   margin-bottom: 9px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
   color: #555555;
   background-color: #ffffff;
@@ -2000,7 +2000,7 @@ button.close {
   *zoom: 1;
   padding: 4px 10px 4px;
   margin-bottom: 0;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 18px;
   *line-height: 20px;
   color: #333333;
@@ -2091,7 +2091,7 @@ button.close {
 }
 .btn-large {
   padding: 9px 14px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: normal;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2102,7 +2102,7 @@ button.close {
 }
 .btn-small {
   padding: 5px 9px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 16px;
 }
 .btn-small [class^="icon-"] {
@@ -2110,7 +2110,7 @@ button.close {
 }
 .btn-mini {
   padding: 2px 6px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 14px;
 }
 .btn-primary,
@@ -3629,7 +3629,7 @@ a.thumbnail:hover {
 }
 .label,
 .badge {
-  font-size: 10.152px;
+  font-size: 11.844px;
   font-weight: bold;
   line-height: 14px;
   color: #ffffff;
