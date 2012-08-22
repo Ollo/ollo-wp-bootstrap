@@ -232,7 +232,8 @@ h1 {
 	padding-right:10px;
 }
 .theTags .label { display:inline;}
-.theTags .label a { color:#fff;}
+.theTags .label a { color:#efefef;}
+.theTags .label a:hover { text-shadow:none; color:#fff;}
 .wpContent {
 	padding:20px 0;
 }
