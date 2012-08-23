@@ -43,11 +43,11 @@ body {
   background-color: #ffffff;
 }
 a {
-  color: #999999;
+  color: #3c5976;
   text-decoration: none;
 }
 a:hover {
-  color: #222222;
+  color: #7899ba;
   text-decoration: none;
   text-shadow: 0 1px 0 #ffffff;
 }
@@ -1883,7 +1883,7 @@ table .span24 {
 .dropdown-menu .active > a:hover {
   color: #ffffff;
   text-decoration: none;
-  background-color: #999999;
+  background-color: #3c5976;
 }
 .open {
   *z-index: 1000;
@@ -2142,18 +2142,18 @@ button.close {
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 }
 .btn-primary {
-  background-color: #999999;
-  background-image: -moz-linear-gradient(top, #999999, #999999);
-  background-image: -ms-linear-gradient(top, #999999, #999999);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#999999), to(#999999));
-  background-image: -webkit-linear-gradient(top, #999999, #999999);
-  background-image: -o-linear-gradient(top, #999999, #999999);
-  background-image: linear-gradient(top, #999999, #999999);
+  background-color: #3c5376;
+  background-image: -moz-linear-gradient(top, #3c5976, #3c4b76);
+  background-image: -ms-linear-gradient(top, #3c5976, #3c4b76);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3c5976), to(#3c4b76));
+  background-image: -webkit-linear-gradient(top, #3c5976, #3c4b76);
+  background-image: -o-linear-gradient(top, #3c5976, #3c4b76);
+  background-image: linear-gradient(top, #3c5976, #3c4b76);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#999999', endColorstr='#999999', GradientType=0);
-  border-color: #999999 #999999 #737373;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3c5976', endColorstr='#3c4b76', GradientType=0);
+  border-color: #3c4b76 #3c4b76 #222b43;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #999999;
+  *background-color: #3c4b76;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -2163,12 +2163,12 @@ button.close {
 .btn-primary.active,
 .btn-primary.disabled,
 .btn-primary[disabled] {
-  background-color: #999999;
-  *background-color: #8c8c8c;
+  background-color: #3c4b76;
+  *background-color: #344065;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #808080 \9;
+  background-color: #2b3554 \9;
 }
 .btn-warning {
   background-color: #f78d23;
@@ -2455,7 +2455,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #e6e6e6;
 }
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #999999;
+  background-color: #3c4b76;
 }
 .btn-group.open .btn-warning.dropdown-toggle {
   background-color: #ec7600;
@@ -2601,7 +2601,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:hover {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #999999;
+  background-color: #3c5976;
 }
 .nav-list [class^="icon-"] {
   margin-right: 2px;
@@ -2679,7 +2679,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: #ffffff;
-  background-color: #999999;
+  background-color: #3c5976;
 }
 .nav-stacked > li {
   float: none;
@@ -2728,14 +2728,14 @@ input[type="submit"].btn.btn-mini {
 }
 .nav-tabs .dropdown-toggle .caret,
 .nav-pills .dropdown-toggle .caret {
-  border-top-color: #999999;
-  border-bottom-color: #999999;
+  border-top-color: #3c5976;
+  border-bottom-color: #3c5976;
   margin-top: 6px;
 }
 .nav-tabs .dropdown-toggle:hover .caret,
 .nav-pills .dropdown-toggle:hover .caret {
-  border-top-color: #222222;
-  border-bottom-color: #222222;
+  border-top-color: #7899ba;
+  border-bottom-color: #7899ba;
 }
 .nav-tabs .active .dropdown-toggle .caret,
 .nav-pills .active .dropdown-toggle .caret {
@@ -2889,6 +2889,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .brand:hover {
   text-decoration: none;
+  text-shadow: 0 1px 0 #c9c9c9;
 }
 .navbar .brand {
   float: left;
@@ -2898,7 +2899,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
-  color: #ffffff;
+  color: #333;
 }
 .navbar .navbar-text {
   margin-bottom: 0;
@@ -2908,7 +2909,7 @@ input[type="submit"].btn.btn-mini {
   color: #ffffff;
 }
 .navbar .navbar-link:hover {
-  color: #eeeeee;
+  color: #999999;
 }
 .navbar .btn,
 .navbar .btn-group {
@@ -2954,44 +2955,6 @@ input[type="submit"].btn.btn-mini {
 .navbar-form .input-prepend input {
   margin-top: 0;
 }
-/*
-// Navbar search
-//.navbar-search {
-//  position: relative;
-//  float: left;
-//  .navbarVerticalAlign(28px); // Vertically center in navbar
-//  margin-bottom: 0;
-//  .search-query {
-//    padding: 4px 9px;
-//    #font > .sans-serif(13px, normal, 1);
-//    color: @white;
-//    background-color: @navbarSearchBackground;
-//    border: 1px solid @navbarSearchBorder;
-//    .box-shadow(~"inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15)");
-//    .transition(none);
-//
-    // Placeholder text gets special styles; can't be a grouped selector
-    &:-moz-placeholder {
-      color: @navbarSearchPlaceholderColor;
-    }
-    &::-webkit-input-placeholder {
-      color: @navbarSearchPlaceholderColor;
-    }
-
-    // Focus states (we use .focused since IE7-8 and down doesn't support :focus)
-    &:focus,
-    &.focused {
-      padding: 5px 10px;
-      color: @grayDark;
-      text-shadow: 0 1px 0 @white;
-      background-color: @navbarSearchBackgroundFocus;
-      border: 0;
-      .box-shadow(0 0 3px rgba(0,0,0,.15));
-      outline: 0;
-    }
-  }
-}
-*/
 .navbar-fixed-top,
 .navbar-fixed-bottom {
   position: fixed;
@@ -3036,7 +2999,7 @@ input[type="submit"].btn.btn-mini {
   float: none;
   padding: 9px 10px 11px;
   line-height: 19px;
-  color: #ffffff;
+  color: #333;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -3052,12 +3015,12 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav > li > a:hover {
   background-color: transparent;
-  color: #eeeeee;
   text-decoration: none;
+  text-shadow: 0 1px 0 #c9c9c9;
 }
 .navbar .nav .active > a,
 .navbar .nav .active > a:hover {
-  color: #eeeeee;
+  color: #999999;
   text-decoration: none;
 }
 .navbar .divider-vertical {
@@ -3614,7 +3577,7 @@ input[type="submit"].btn.btn-mini {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 a.thumbnail:hover {
-  border-color: #999999;
+  border-color: #3c5976;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
