@@ -118,6 +118,7 @@ h1 {
 #homeWork {
 	padding: 15px 0;
 	border-top: 1px solid #a3a3a3;
+	border-bottom:1px solid #efefef;
 }
 #homeWord .heading {
 	color:#3d3d3d;
@@ -128,7 +129,8 @@ h1 {
 
 #homeWords {
 	background: #cdcdcd;
-	border-top: 1px solid #fff;
+	border-top: 1px solid #eee;
+	border-bottom:0.5px solid #a3a3a3;
 	color:#333;
 }
 #wordsInner {
