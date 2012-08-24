@@ -29,7 +29,7 @@
 	    <div class="navbar-inner">
 	        <div class="container-fluid">
 	            <div id="header" class="inner">
-    	            <h1><a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+    	            <h1><a class="brand heading" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 	    
         		    <?php wp_nav_menu( array( 'container_class' => ' ', 'theme_location' => 'primary', 'menu_class' => 'nav right' ) ); ?>
     		    </div>

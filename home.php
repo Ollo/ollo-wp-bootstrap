@@ -24,7 +24,7 @@ get_header();
                         
                         while ( $workPage_query->have_posts() ) : $workPage_query->the_post(); ?>
                         
-                            <h1 class="heading shadowTextDark"><a href="<?php bloginfo('url');  ?>/work/">RECENT WORK</a></h1>
+                            <h1 class="heading shadowText"><a href="<?php bloginfo('url');  ?>/work/">RECENT WORK</a></h1>
                                 <h3 class="heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                 <p><?php print_excerpt(600); ?></p>
                         
@@ -48,7 +48,7 @@ get_header();
                         
                         $myposts = get_posts( $wordargs );
                         foreach( $myposts as $post ) :	setup_postdata($post); ?>
-                            <h1 class="heading shadowTextLight"><a href="<?php bloginfo('url'); ?>/words/">RECENT WORDS</a></h1>
+                            <h1 class="heading shadowText"><a href="<?php bloginfo('url'); ?>/words/">RECENT WORDS</a></h1>
                             <h3 class="heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             <p><?php print_excerpt(600); ?></p>
                             

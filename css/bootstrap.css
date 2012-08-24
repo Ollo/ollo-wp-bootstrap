@@ -2899,7 +2899,8 @@ input[type="submit"].btn.btn-mini {
   font-size: 20px;
   font-weight: 200;
   line-height: 1;
-  color: #333;
+  color: #555555;
+  text-shadow: 0 2px 0 #999999;
 }
 .navbar .navbar-text {
   margin-bottom: 0;
@@ -2999,9 +3000,9 @@ input[type="submit"].btn.btn-mini {
   float: none;
   padding: 9px 10px 11px;
   line-height: 19px;
-  color: #333;
+  color: #555555;
+  text-shadow: 0 2px 0 #999999;
   text-decoration: none;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 .navbar .btn {
   display: inline-block;

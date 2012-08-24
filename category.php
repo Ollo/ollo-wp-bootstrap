@@ -7,6 +7,7 @@
  */
 
 get_header(); ?>
+<div id="content" class="inner">
 
 				<h1><?php
 					printf( __( 'Category Archives: %s', 'ollomedia' ), '' . single_cat_title( '', false ) . '' );
@@ -22,6 +23,6 @@ get_header(); ?>
 				 */
 				get_template_part( 'loop', 'category' );
 				?>
-
+</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

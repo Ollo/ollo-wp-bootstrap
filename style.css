@@ -80,13 +80,9 @@ body:before {
 .heading a  {
 	color:inherit;
 }
-.shadowTextDark {
+.shadowText {
 	text-shadow: 1px 1px 2px #efefef;
 }
-.shadowTextLight {
-	text-shadow: 1px 1px 2px #efefef;
-}
-
 h1 {
 	font-size: 3.500em;
 	font-family: 'Open Sans', sans-serif;
@@ -123,9 +119,13 @@ h1 {
 	padding: 15px 0;
 	border-top: 1px solid #a3a3a3;
 }
+#homeWord .heading {
+	color:#3d3d3d;
+}
 #homeWork .heading:hover {
 	color:#666;
 }
+
 #homeWords {
 	background: #cdcdcd;
 	border-top: 1px solid #fff;
@@ -134,6 +134,7 @@ h1 {
 #wordsInner {
 	padding: 20px 0 15px;
 }
+
 #homeWords .heading:hover {
 	color:#666;
 }

@@ -21,24 +21,7 @@
 
 <?php endif; ?>
 
-<?php
-	/* Start the Loop.
-	 *
-	 * In Twenty Ten we use the same loop in multiple contexts.
-	 * It is broken into three main parts: when we're displaying
-	 * posts that are in the gallery category, when we're displaying
-	 * posts in the asides category, and finally all other posts.
-	 *
-	 * Additionally, we sometimes check for whether we are on an
-	 * archive page, a search page, etc., allowing for small differences
-	 * in the loop on each template without actually duplicating
-	 * the rest of the loop that is shared.
-	 *
-	 * Without further ado, the loop:
-	 */ ?>
 <?php while ( have_posts() ) : the_post(); ?>
-
-<?php /* How to display posts in the Gallery category. */ ?>
 
 	<?php if ( in_category( _x('gallery', 'gallery category slug', 'ollomedia') ) ) : ?>
 			<h2><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'ollomedia' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
