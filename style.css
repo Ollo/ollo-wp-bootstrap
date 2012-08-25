@@ -262,6 +262,23 @@ h1 {
 		-ms-box-shadow:2px 2px 2px #ddd;
 		-o-box-shadow:2px 2px 2px #ddd;
 }
+#catList {
+	margin:0 0 10px;
+	padding:20px;
+	background:#fff;
+	border:1px solid #ddd;
+	border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+}
+#catList li {
+	list-style:none;
+	display:inline;
+	padding:0 20px 0 0;
+}
+#catList .catInfo {
+	margin:0 0 8px;
+}
 /* pretify styles 
 ===================*/
 

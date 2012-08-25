@@ -7,15 +7,10 @@
  */
 
 get_header(); ?>
-<div id="content" class="inner">
 
-				<h1><?php
-					printf( __( 'Tagged =  %s', 'ollomedia' ), '' . single_tag_title( '', false ) . '' );
-				?></h1>
-
-<?php
- get_template_part( 'loop', 'tag' );
-?>
-</div>
-<?php get_sidebar(); ?>
+    <div id="content" class="inner">
+        <h1><?php printf( __( 'Tagged =  %s', 'ollomedia' ), '' . single_tag_title( '', false ) . '' ); ?></h1>
+        <?php get_template_part( 'loop', 'tag' ); ?>
+    </div>
+    
 <?php get_footer(); ?>

@@ -19,7 +19,6 @@ get_header(); ?>
         <div class="wpContent">
             <?php the_content(); ?>
         </div>
-    	    <?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'ollomedia' ), 'after' => '' ) ); ?>
             <hr />
         <div class="clearfix">
             <span class="left">
@@ -40,7 +39,7 @@ get_header(); ?>
     		        <h3 class="heading"><?php printf( esc_attr__( 'Who is %s', 'ollomedia' ), get_the_author() ); ?></h3>
     		        <?php the_author_meta( 'description' ); ?>
     		        <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
-    		        <?php printf( __( 'See All Posts', 'ollomedia' ), get_the_author() ); ?>
+    		        <?php printf( __( 'More Posts', 'ollomedia' ), get_the_author() ); ?>
     		        </a>
                 <?php endif; ?>
             </div>

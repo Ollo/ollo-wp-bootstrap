@@ -7,11 +7,11 @@
  */
 
 get_header(); ?>
-<div id="content" class="inner">
 
-				<h1><?php
-					printf( __( 'Category Archives: %s', 'ollomedia' ), '' . single_cat_title( '', false ) . '' );
-				?></h1>
+<div id="content" class="inner">
+    <div>
+        <h1><?php printf( __( 'Category Archives: %s', 'ollomedia' ), '' . single_cat_title( '', false ) . '' );?></h1>
+	</div>
 				<?php
 					$category_description = category_description();
 					if ( ! empty( $category_description ) )
@@ -24,5 +24,4 @@ get_header(); ?>
 				get_template_part( 'loop', 'category' );
 				?>
 </div>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -4,7 +4,6 @@ Template Name: Words
 */
 get_header();
 ?>
-
     <section>
         <div id="content" class="inner clearfix">
             <div class="pageIntro">
@@ -13,9 +12,6 @@ get_header();
                 while ( have_posts() ) : the_post();
                 	the_content();
                 endwhile; wp_reset_query(); ?>
-            </div>
-            <div id="theCats">
-                
             </div>
             
             <div id="blogFeed">
@@ -56,8 +52,4 @@ get_header();
          	    
             </div> 
     </section>
-
-
-
-
 <?php get_footer(); ?>
