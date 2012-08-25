@@ -246,6 +246,22 @@ h1 {
 .wpContent h2, h3 {
 	display:block;
 }
+.postContent {
+	padding-top:10px;
+}
+.postContent img {
+	background:#fff;
+	padding:10px;
+	margin:0 20px 20px 0;
+	border:1px solid #ddd;
+}
+.postContent img:hover {
+	box-shadow:1px 1px 0 #ddd;
+		-moz-box-shadow:2px 2px 2px #ddd;
+		-webkit-box-shadow:2px 2px 2px #ddd;
+		-ms-box-shadow:2px 2px 2px #ddd;
+		-o-box-shadow:2px 2px 2px #ddd;
+}
 /* pretify styles 
 ===================*/
 

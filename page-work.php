@@ -17,7 +17,7 @@ get_header();
                  <?php   
                     // args for the portfolio query 
                     $args = array(
-                        'post_count' => 9,
+                        'post_count' => 12,
                         'post_type' => 'portfolio'
                     );
                     $workPage_query = new WP_Query( $args );
