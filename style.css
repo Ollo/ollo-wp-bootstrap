@@ -96,6 +96,22 @@ h1 {
 	background: url('img/headerBg.png') repeat-x #efefef
 }
 
+/* image styles 
+===================*/
+
+.postThumb {
+	background:#fff;
+	padding:10px;
+	margin:0 20px 20px 0;
+	border:1px solid #ddd;
+}
+.postThumb:hover {
+	box-shadow:1px 1px 0 #ddd;
+		-moz-box-shadow:2px 2px 2px #ddd;
+		-webkit-box-shadow:2px 2px 2px #ddd;
+		-ms-box-shadow:2px 2px 2px #ddd;
+		-o-box-shadow:2px 2px 2px #ddd;
+}
 /* home page 
 ==================*/
 
@@ -249,36 +265,23 @@ h1 {
 .postContent {
 	padding-top:10px;
 }
-.postContent img {
-	background:#fff;
-	padding:10px;
-	margin:0 20px 20px 0;
-	border:1px solid #ddd;
+
+/* tag views 
+===============*/
+
+#tagView hr {
+	margin:5px 0;
 }
-.postContent img:hover {
-	box-shadow:1px 1px 0 #ddd;
-		-moz-box-shadow:2px 2px 2px #ddd;
-		-webkit-box-shadow:2px 2px 2px #ddd;
-		-ms-box-shadow:2px 2px 2px #ddd;
-		-o-box-shadow:2px 2px 2px #ddd;
+#tagView h1 {
+	display:inline-block;
 }
-#catList {
-	margin:0 0 10px;
-	padding:20px;
-	background:#fff;
-	border:1px solid #ddd;
-	border-radius:5px;
-		-moz-border-radius:5px;
-		-webkit-border-radius:5px;
+.toTop {
+margin-top:25px;
 }
-#catList li {
-	list-style:none;
-	display:inline;
-	padding:0 20px 0 0;
+.tagPost {
+	margin-top:10px;
 }
-#catList .catInfo {
-	margin:0 0 8px;
-}
+
 /* pretify styles 
 ===================*/
 

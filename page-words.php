@@ -37,7 +37,7 @@ get_header();
                         </div>
                         <div class="postContent left">
                  	        <a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>">
-                 	            <?php the_post_thumbnail('thumbnail', array('class' => 'left')); ?>
+                 	            <?php the_post_thumbnail('thumbnail', array('class' => 'postThumb left')); ?>
                  	        </a>
                  	        <p class="left"><?php print_excerpt(600); ?></p>
                  	        <a class="btn btn-primary left" href="<?php the_permalink(); ?>">Read More</a>

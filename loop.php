@@ -24,26 +24,29 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 <?php /* How to display all other posts. */ ?>
-    <div id="content" class="inner">
+		<div class="tagPost clearfix">
 		<h2 class="heading">
 		    <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'ollomedia' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h2>
 	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
-			<div><?php the_excerpt(); ?></div>
+	    <a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>">
+     	    <?php the_post_thumbnail('thumbnail', array('class' => 'postThumb left')); ?>
+     	</a>
+			<?php the_excerpt(); ?>
 	<?php else : ?>
-			<div><?php the_content( __( 'Continue reading &rarr;', 'ollomedia' ) ); ?></div>
+	    <a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>">
+     	    <?php the_post_thumbnail('thumbnail', array('class' => 'postThumb left')); ?>
+     	</a>
+			<?php the_content( __( 'Continue reading &rarr;', 'ollomedia' ) ); ?>
 	<?php endif; ?>
-    </div>
-				
-	<?php
-		$tags_list = get_the_tag_list( '', ', ' );
-		if ( $tags_list ):
-	?>
-	<?php printf( __( 'Tagged %2$s', 'ollomedia' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
-	
+				<?php
+					$tags_list = get_the_tag_list( '', ', ' );
+					if ( $tags_list ):
+				?>
+					<?php printf( __( 'Tagged %2$s', 'ollomedia' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
+		</div>
+		<hr />
 	<?php endif; ?>
-    <hr />
-    
 <?php endwhile; ?>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
