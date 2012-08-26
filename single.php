@@ -32,7 +32,7 @@ get_header(); ?>
         <div id="authBio" class="span6 clearfix">
             <?php // If a user has filled out their description, show a bio on their entries ?>
             <div class="left">
-        	    <?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'ollomedia_author_bio_avatar_size', 100 ) ); ?>
+        	    <?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'ollomedia_author_bio_avatar_size', 80 ) ); ?>
         	</div>
         	<div class="span4">
                 <?php if ( get_the_author_meta( 'description' ) ) : ?>

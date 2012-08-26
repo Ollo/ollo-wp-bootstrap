@@ -99,13 +99,13 @@ h1 {
 /* image styles 
 ===================*/
 
-.postThumb {
+.postThumb , .size-full, .avatar {
 	background:#fff;
 	padding:10px;
 	margin:0 20px 20px 0;
 	border:1px solid #ddd;
 }
-.postThumb:hover {
+.postThumb:hover, .size-full:hover, .avatar:hover	 {
 	box-shadow:1px 1px 0 #ddd;
 		-moz-box-shadow:2px 2px 2px #ddd;
 		-webkit-box-shadow:2px 2px 2px #ddd;
