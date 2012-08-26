@@ -22,23 +22,25 @@
 		<h2 class="heading">
 		    <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'ollomedia' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
 		</h2>
+		<div class="theTags">
+    	    <h4 class="heading left">Tagged in :</h4>
+    	    <?php the_tags('<ul><li class="label">','</li><li class="label">','</li></ul>'); ?>
+        </div>
 	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
 	    <a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>">
      	    <?php the_post_thumbnail('thumbnail', array('class' => 'postThumb left')); ?>
      	</a>
-			<?php the_excerpt(); ?>	
+			<p class="left"><?php print_excerpt(600); ?></p>
+ 	        <a class="btn btn-primary" href="<?php the_permalink(); ?>">Read More</a>
 	<?php else : ?>
 	    <a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>">
+	        <div class="theTags">
+        	    <h4 class="heading left">Tagged in:</h4>
+        	    <?php the_tags('<ul><li class="label">','</li><li class="label">','</li></ul>'); ?>
+            </div>
      	    <?php the_post_thumbnail('thumbnail', array('class' => 'postThumb left')); ?>
      	</a>
 			<?php the_content( __( 'Continue reading &rarr;', 'ollomedia' ) ); ?>
-	<?php endif; ?>
-				<?php
-					$tags_list = get_the_tag_list( '', ', ' );
-					if ( $tags_list ):
-				?>
-					<?php printf( __( 'Tagged %2$s', 'ollomedia' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
-		
 	<?php endif; ?>
 	</div>
 	<hr />

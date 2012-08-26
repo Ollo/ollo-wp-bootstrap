@@ -281,6 +281,9 @@ margin-top:25px;
 .tagPost {
 	margin-top:10px;
 }
+.tagPost .theTags {
+	margin:5px 0;
+}
 
 /* pretify styles 
 ===================*/
