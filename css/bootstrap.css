@@ -3992,10 +3992,12 @@ a.badge:hover {
   line-height: 27px;
   color: inherit;
 }
-.right {
+.right,
+.alignleft {
   float: right;
 }
-.left {
+.left,
+.alignleft {
   float: left;
 }
 .hide {

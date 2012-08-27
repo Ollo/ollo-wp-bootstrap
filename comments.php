@@ -21,10 +21,10 @@
 
 <?php if ( have_comments() ) : ?>
 			<!-- STARKERS NOTE: The following h3 id is left intact so that comments can be referenced on the page -->
-			<h3 id="comments-title"><?php
-			printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'ollomedia' ),
-			number_format_i18n( get_comments_number() ), '' . get_the_title() . '' );
-			?></h3>
+			<h3 id="comments-title">
+			    <?php printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'ollomedia' ),
+    			number_format_i18n( get_comments_number() ), '' . get_the_title() . '' );?>
+			</h3>
 
 <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 				<?php previous_comments_link( __( '&larr; Older Comments', 'ollomedia' ) ); ?>

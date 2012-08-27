@@ -16,25 +16,21 @@ remove_action('wp_head', 'index_rel_link');
 remove_action('wp_head', 'wlwmanifest_link');
 
 
-if ( ! isset( $content_width ) )
-	$content_width = 640;
-
 /** Tell WordPress to run ollomedia_setup() when the 'after_setup_theme' hook is run. */
 add_action( 'after_setup_theme', 'ollomedia_setup' );
 
 if ( ! function_exists( 'ollomedia_setup' ) ):
 /**
  *
- * @uses add_theme_support() To add support for post thumbnails and automatic feed links.
+ * @uses add_theme_support() To add support for post thumbnails.
  * @uses register_nav_menus() To add support for navigation menus.
  * @uses add_editor_style() To style the visual editor.
- * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
  * @since Twenty Ten 1.0
  */
 function ollomedia_setup() {
 
-	// This theme styles the visual editor with editor-style.css to match the theme style.
+	// Not sure I'm going to use this but keeping it for now
 	add_editor_style();
 
 	// This theme uses post thumbnails
@@ -116,7 +112,7 @@ function reverse_strrchr($haystack, $needle, $trail) {
 }
 
 /**
- * Returns a "Continue Reading" link for excerpts
+ * Returns a "Continue Reading" link for the_excerpt / keeping but using the custom function above
  */
 function ollomedia_continue_reading_link() {
 	return ' <a href="'. get_permalink() . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'ollomedia' ) . '</a>';
@@ -141,15 +137,9 @@ function ollomedia_custom_excerpt_more( $output ) {
 }
 add_filter( 'get_the_excerpt', 'ollomedia_custom_excerpt_more' );
 
-/**
- * Remove inline styles printed when the gallery shortcode is used.
- */
-function ollomedia_remove_gallery_css( $css ) {
-	return preg_replace( "#<style type='text/css'>(.*?)</style>#s", '', $css );
-}
-add_filter( 'gallery_style', 'ollomedia_remove_gallery_css' );
 
 if ( ! function_exists( 'ollomedia_comment' ) ) :
+
 /**
  * Template for comments and pingbacks.
  */
@@ -166,7 +156,7 @@ function ollomedia_comment( $comment, $args, $depth ) {
 			<?php printf( __( '%s <span class="says">says:</span>', 'ollomedia' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 		</div><!-- .comment-author .vcard -->
 		<?php if ( $comment->comment_approved == '0' ) : ?>
-			<em><?php _e( 'Your comment is awaiting moderation.', 'ollomedia' ); ?></em>
+			<em><?php _e( 'Thanks, I\'ll review and get back to you.', 'ollomedia' ); ?></em>
 			<br />
 		<?php endif; ?>
 
@@ -197,29 +187,7 @@ function ollomedia_comment( $comment, $args, $depth ) {
 }
 endif;
 
-/*
-if ( ! function_exists( 'ollomedia_posted_on' ) ) :
-/**
- * Prints HTML with meta information for the current post—date/time and author.
- */
-/*
-function ollomedia_posted_on() {
-	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'ollomedia' ),
-		'meta-prep meta-prep-author',
-		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
-			get_permalink(),
-			esc_attr( get_the_time() ),
-			get_the_date()
-		),
-		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
-			get_author_posts_url( get_the_author_meta( 'ID' ) ),
-			sprintf( esc_attr__( 'View all posts by %s', 'ollomedia' ), get_the_author() ),
-			get_the_author()
-		)
-	);
-}
-endif;
-*/
+
 if ( ! function_exists( 'ollomedia_posted_in' ) ) :
 /**
  * Prints HTML with meta information for the current post (category, tags and permalink).
@@ -244,5 +212,4 @@ function ollomedia_posted_in() {
 	);
 }
 endif;
-
 ?>
