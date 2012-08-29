@@ -282,49 +282,89 @@ margin-top:25px;
 .tagPost .theTags {
 	margin:5px 0;
 }
-/* fucking comment styles 
+/* comment styles 
 ===================*/
+#respond {
+	background:#ddd;
+	padding:20px;
+	border-radius:7px;
+	border:1px solid #a3a3a3;
+}
+.required {
+	color:#ff0000;
+	padding-left:7px;
+}
+.commentCode {
+	background:#ccc;
+	color:#ff0000;
+	padding:5px;
+	line-height:1.5;
+}
 
-ol.commentlist { list-style:none; margin:0 0 1em; padding:0; text-indent:0; }
-ol.commentlist li { }
-ol.commentlist li.alt { }
-ol.commentlist li.bypostauthor {}
-ol.commentlist li.byuser {}
-ol.commentlist li.comment-author-admin {}
-ol.commentlist li.comment { border-bottom:1px dotted #666; padding:1em; }
-ol.commentlist li.comment div.comment-author {}
-ol.commentlist li.comment div.vcard { font:normal 16px georgia,times,serif; }
-ol.commentlist li.comment div.vcard cite.fn { font-style:normal; }
-ol.commentlist li.comment div.vcard cite.fn a.url {}
-ol.commentlist li.comment div.vcard img.avatar { border:5px solid #ccc; float:right; margin:0 0 1em 1em; }
-ol.commentlist li.comment div.vcard img.avatar-32 {}
-ol.commentlist li.comment div.vcard img.photo {}
-ol.commentlist li.comment div.vcard span.says {}
-ol.commentlist li.comment div.commentmetadata {}
-ol.commentlist li.comment div.comment-meta { font-size:9px; }
-ol.commentlist li.comment div.comment-meta a { color:#ccc; }
-ol.commentlist li.comment p { font-size:11px; margin:0 0 1em; }
-ol.commentlist li.comment ul { font-size:11px; list-style:square; margin:0 0 1em 2em; }
-ol.commentlist li.comment div.reply { font-size:11px; }
-ol.commentlist li.comment div.reply a { font-weight:bold; }
-ol.commentlist li.comment ul.children { list-style:none; margin:1em 0 0; text-indent:0; }
-ol.commentlist li.comment ul.children li {}
-ol.commentlist li.comment ul.children li.alt {}
-ol.commentlist li.comment ul.children li.bypostauthor {}
-ol.commentlist li.comment ul.children li.byuser {}
-ol.commentlist li.comment ul.children li.comment {}
-ol.commentlist li.comment ul.children li.comment-author-admin {}
-ol.commentlist li.comment ul.children li.depth-2 { border-left:5px solid #555; margin:0 0 .25em .25em; }
-ol.commentlist li.comment ul.children li.depth-3 { border-left:5px solid #999; margin:0 0 .25em .25em; }
-ol.commentlist li.comment ul.children li.depth-4 { border-left:5px solid #bbb; margin:0 0 .25em .25em; }
-ol.commentlist li.comment ul.children li.depth-5 {}
-ol.commentlist li.comment ul.children li.odd {}
-ol.commentlist li.even { background:#fff; }
-ol.commentlist li.odd { background:#f6f6f6; }
-ol.commentlist li.parent { border-left:5px solid #111; }
-ol.commentlist li.thread-alt { }
-ol.commentlist li.thread-even {}
-ol.commentlist li.thread-odd {}
+/* defaults :/ */
+ul.commentlist { margin:0;}
+ul.commentlist li { list-style:none; margin:20px 0; padding:20px;}
+ul.commentlist li.alt {}
+ul.commentlist li.bypostauthor {}
+ul.commentlist li.byuser {}
+ul.commentlist li.comment-author-admin {}
+ul.commentlist li.comment {}
+ul.commentlist li.comment div.comment-author {}
+ul.commentlist li.comment div.vcard {}
+ul.commentlist li.comment div.vcard cite.fn {}
+ul.commentlist li.comment div.vcard cite.fn a.url {}
+ul.commentlist li.comment div.vcard img.avatar {}
+ul.commentlist li.comment div.vcard img.avatar-32 {}
+ul.commentlist li.comment div.vcard img.photo {}
+ul.commentlist li.comment div.vcard span.says {}
+ul.commentlist li.comment div.commentmetadata {}
+ul.commentlist li.comment div.comment-meta {}
+ul.commentlist li.comment div.comment-meta a {}
+ul.commentlist li.comment * {} - (p, em, strong, blockquote, ul, ul, etc.)
+ul.commentlist li.comment div.reply {}
+ul.commentlist li.comment div.reply a {}
+ul.commentlist li.comment ul.children {}
+ul.commentlist li.comment ul.children li {}
+ul.commentlist li.comment ul.children li.alt {}
+ul.commentlist li.comment ul.children li.bypostauthor {}
+ul.commentlist li.comment ul.children li.byuser {}
+ul.commentlist li.comment ul.children li.comment {}
+ul.commentlist li.comment ul.children li.comment-author-admin {}
+ul.commentlist li.comment ul.children li.depth-2 {}
+ul.commentlist li.comment ul.children li.depth-3 {}
+ul.commentlist li.comment ul.children li.depth-4 {}
+ul.commentlist li.comment ul.children li.depth-5 {}
+ul.commentlist li.comment ul.children li.odd {}
+ul.commentlist li.even { background:#ddd; border:#fff; }
+ul.commentlist li.odd { background:#fff; border:#ddd;}
+ul.commentlist li.parent {}
+ul.commentlist li.pingback {}
+ul.commentlist li.pingback div.comment-author {}
+ul.commentlist li.pingback div.vcard {}
+ul.commentlist li.pingback div.vcard cite.fn {}
+ul.commentlist li.pingback div.vcard cite.fn a.url {}
+ul.commentlist li.pingback div.vcard span.says {}
+ul.commentlist li.pingback div.commentmetadata {}
+ul.commentlist li.pingback div.comment-meta {}
+ul.commentlist li.pingback div.comment-meta a {}
+ul.commentlist li.pingback * {} - (p, em, strong, blockquote, ul, ul, etc.)
+ul.commentlist li.pingback div.reply {}
+ul.commentlist li.pingback div.reply a {}
+ul.commentlist li.pingback ul.children {}
+ul.commentlist li.pingback ul.children li {}
+ul.commentlist li.pingback ul.children li.alt {}
+ul.commentlist li.pingback ul.children li.bypostauthor {}
+ul.commentlist li.pingback ul.children li.byuser {}
+ul.commentlist li.pingback ul.children li.comment {}
+ul.commentlist li.pingback ul.children li.comment-author-admin {}
+ul.commentlist li.pingback ul.children li.depth-2 {}
+ul.commentlist li.pingback ul.children li.depth-3 {}
+ul.commentlist li.pingback ul.children li.depth-4 {}
+ul.commentlist li.pingback ul.children li.depth-5 {}
+ul.commentlist li.pingback ul.children li.odd {}
+ul.commentlist li.thread-alt {}
+ul.commentlist li.thread-even {}
+ul.commentlist li.thread-odd {}
 
 /* pretify styles 
 ===================*/
@@ -379,8 +419,7 @@ li.L0, li.L1, li.L2, li.L3, li.L4, li.L5, li.L6, li.L7, li.L8, li.L9 {
 li.L1, li.L3, li.L5, li.L7, li.L9 {
     background: #111;
 }
-@media print
-{
+@media print {
     .str {
         color: #060;
     }

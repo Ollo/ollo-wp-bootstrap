@@ -137,55 +137,92 @@ function ollomedia_custom_excerpt_more( $output ) {
 }
 add_filter( 'get_the_excerpt', 'ollomedia_custom_excerpt_more' );
 
-
-if ( ! function_exists( 'ollomedia_comment' ) ) :
-
 /**
  * Template for comments and pingbacks.
  */
 
-function ollomedia_comment( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment;
-	switch ( $comment->comment_type ) :
-		case '' :
-	?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<div id="comment-<?php comment_ID(); ?>">
-		<div class="comment-author vcard">
-			<?php echo get_avatar( $comment, 40 ); ?>
-			<?php printf( __( '%s <span class="says">says:</span>', 'ollomedia' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
-		</div><!-- .comment-author .vcard -->
-		<?php if ( $comment->comment_approved == '0' ) : ?>
-			<em><?php _e( 'Thanks, I\'ll review and get back to you.', 'ollomedia' ); ?></em>
-			<br />
-		<?php endif; ?>
+function ollo_comment_form( $args = array(), $post_id = null ) {
+         global $user_identity, $id;
 
-		<div class="comment-meta commentmetadata"><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-			<?php
-				/* translators: 1: date, 2: time */
-				printf( __( '%1$s at %2$s', 'ollomedia' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)', 'ollomedia' ), ' ' );
-			?>
-		</div><!-- .comment-meta .commentmetadata -->
+         if ( null === $post_id )
+                 $post_id = $id;
+         else
+                 $id = $post_id;
 
-		<div class="comment-body"><?php comment_text(); ?></div>
+         $commenter = wp_get_current_commenter();
 
-		<div class="reply">
-			<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-		</div><!-- .reply -->
-	</div><!-- #comment-##  -->
+         $req = get_option( 'require_name_email' );
+         $aria_req = ( $req ? " aria-required='true'" : '' );
+         $fields =  array(
+                 'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . '<span class="required">*</span></label> ' . ( $req ? '' : '' ) .
+                             '<input id="author" name="author" type="text" class="span6" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+                 'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email' ) . '<span class="required">*</span></label> ' . ( $req ? '' : '' ) .
+                             '<input id="email" name="email" type="text" class="span6" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+                 'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
+                             '<input id="url" name="url" type="text" class="span6" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
+         );
 
-	<?php
-			break;
-		case 'pingback'  :
-		case 'trackback' :
-	?>
-	<li class="post pingback">
-		<p><?php _e( 'Pingback:', 'ollomedia' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'ollomedia'), ' ' ); ?></p>
-	<?php
-			break;
-	endswitch;
+         $required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="required">*</span>' );
+         $defaults = array(
+                 'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
+                 'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" name="comment" class="span6" rows="5" aria-required="true"></textarea></p>',
+                 'must_log_in'          => '<p class="must-log-in">' .  sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
+                 'logged_in_as'         => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), admin_url( 'profile.php' ), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
+                 'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) . '</p>',
+                 'comment_notes_after'  => '',
+                 'id_form'              => 'commentform',
+                 'id_submit'            => 'submit',
+                 'class_submit'         => 'submit btn btn-primary',
+                 'title_reply'          => __( 'Join the Conversation' ),
+                 'title_reply_to'       => __( 'Your thoughts on %s' ),
+                 'cancel_reply_link'    => __( 'Cancel reply' ),
+                 'label_submit'         => __( 'Submit' ),
+         );
+
+         $args = wp_parse_args( $args, apply_filters( 'comment_form_defaults', $defaults ) );
+
+         ?>
+                 <?php if ( comments_open() ) : ?>
+                         <?php do_action( 'comment_form_before' ); ?>
+                         <div class="span8">
+                         <div id="respond" class="left row">
+                                 <h3 id="reply-title" clas="heading"><?php comment_form_title( $args['title_reply'], $args['title_reply_to'] ); ?> <small><?php cancel_comment_reply_link( $args['cancel_reply_link'] ); ?></small></h3>
+                                 <?php if ( get_option( 'comment_registration' ) && !is_user_logged_in() ) : ?>
+                                         <?php echo $args['must_log_in']; ?>
+                                         <?php do_action( 'comment_form_must_log_in_after' ); ?>
+                                 <?php else : ?>
+                                         <form action="<?php echo site_url( '/wp-comments-post.php' ); ?>" method="post" id="<?php echo esc_attr( $args['id_form'] ); ?>">
+                                                 <?php do_action( 'comment_form_top' ); ?>
+                                                 <?php if ( is_user_logged_in() ) : ?>
+                                                         <?php echo apply_filters( 'comment_form_logged_in', $args['logged_in_as'], $commenter, $user_identity ); ?>
+                                                         <?php do_action( 'comment_form_logged_in_after', $commenter, $user_identity ); ?>
+                                                 <?php else : ?>
+                                                         <?php echo $args['comment_notes_before']; ?>
+                                                         <?php
+                                                         do_action( 'comment_form_before_fields' );
+                                                         foreach ( (array) $args['fields'] as $name => $field ) {
+                                                                 echo apply_filters( "comment_form_field_{$name}", $field ) . "\n";
+                                                         }
+                                                         do_action( 'comment_form_after_fields' );
+                                                         ?>
+                                                 <?php endif; ?>
+                                                 <?php echo apply_filters( 'comment_form_field_comment', $args['comment_field'] ); ?>
+                                                 <?php echo $args['comment_notes_after']; ?>
+                                                 <p class="form-submit">
+                                                         <input name="submit" type="submit" id="<?php echo esc_attr( $args['id_submit'] ); ?>" class="<?php echo esc_attr( $args['class_submit'] ); ?>" value="<?php echo esc_attr( $args['label_submit'] ); ?>" />
+                                                         <?php comment_id_fields(); ?>
+                                                 </p>
+                                                 <?php do_action( 'comment_form', $post_id ); ?>
+                                         </form>
+                                 <?php endif; ?>
+                         </div><!-- #respond -->
+                    </div><!-- conatiner -->
+                         <?php do_action( 'comment_form_after' ); ?>
+                 <?php else : ?>
+                         <?php do_action( 'comment_form_comments_closed' ); ?>
+                 <?php endif; ?>
+         <?php
 }
-endif;
 
 
 if ( ! function_exists( 'ollomedia_posted_in' ) ) :
