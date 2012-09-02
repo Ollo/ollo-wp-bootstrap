@@ -302,6 +302,7 @@ margin-top:25px;
 }
 
 /* defaults :/ */
+#comments { margin-left:0;}
 ul.commentlist { margin:0;}
 ul.commentlist li { list-style:none; margin:20px 0; padding:20px; border-radius:5px; box-shadow:1px 2px 1px 1px #a3a3a3;}
 ul.commentlist li.alt {}
@@ -339,9 +340,12 @@ ul.commentlist li.comment ul.children li.depth-2 {}
 ul.commentlist li.comment ul.children li.depth-3 {}
 ul.commentlist li.comment ul.children li.depth-4 {}
 ul.commentlist li.comment ul.children li.depth-5 {}
-ul.commentlist li.comment ul.children li.odd {}
-ul.commentlist li.even { background:#ddd; border:#fff; margin-left:0; margin-right:20px;}
-ul.commentlist li.odd { background:#fff; border:#ddd; margin-left:20px;}
+ul.commentlist li.comment ul.children li.odd {	
+	background: url('img/workBg.png') 100% #EEE;
+	box-shadow: inset 0px 1px 5px 0px #999; 
+}
+ul.commentlist li.even { background:#ddd; border:#fff;}
+ul.commentlist li.odd { background:#fff; border:#ddd; }
 ul.commentlist li.parent {}
 ul.commentlist li.pingback {}
 ul.commentlist li.pingback div.comment-author { display:inline-block;}
