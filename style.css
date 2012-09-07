@@ -375,6 +375,34 @@ ul.commentlist li.thread-alt {}
 ul.commentlist li.thread-even {}
 ul.commentlist li.thread-odd {}
 
+/* misc page styles 
+===================*/
+.bio p { 
+	font-family: 'Open Sans', sans-serif;
+	font-size:18px;
+	line-height:30px;
+}
+#contactMe {
+	background:#c3c3c3;
+	border:1px solid #a3a3a3;
+	border-radius:5px;
+	padding:10px;
+}
+#contactMe input, #contactMe textarea {
+	border:1px solid #a3a3a3;
+	color:#999;
+	font-style:italic;
+}
+#contactMe input.btn {
+	color:#fff;
+}
+#contactMe input:focus, #contactMe textarea:focus {
+	border-color:#fff;
+	box-shadow:none;
+	outline:0;
+	border: 1px solid #a3a3a3;	
+}
+
 /* pretify styles 
 ===================*/
 
