@@ -184,18 +184,48 @@ function ollo_comment_form( $args = array(), $post_id = null ) {
          ?>
                  <?php if ( comments_open() ) : ?>
                          <?php do_action( 'comment_form_before' ); ?>
-                         <div class="span8">
-                         <div id="respond" class="left row">
-                                 <h3 id="reply-title" clas="heading"><?php comment_form_title( $args['title_reply'], $args['title_reply_to'] ); ?> <small><?php cancel_comment_reply_link( $args['cancel_reply_link'] ); ?></small></h3>
+            <div id="post-share" class="right span4">
+
+                 <h3 class="heading">Or Share this article</h3>
+                 <div class="tweet left">
+                      <a href="https://twitter.com/share/" data-url="<?php get_permalink($post->ID); ?>" data-count="vertical" class="twitter-share-button" data-lang="en">Tweet</a>
+                      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                 </div>
+                 <div class="linked left">
+                     <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+                     <script type="IN/Share" data-url="<?php the_permalink(); ?>" data-counter="top"></script>
+                 </div>
+                 <div class="share left">
+                     <iframe src="//www.facebook.com/plugins/like.php?href=<?php the_permalink();?>&amp;send=false&amp;layout=box_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=90" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:90px;" allowTransparency="true"></iframe>
+                 </div>
+                 <div class="plus1 left">
+                     <!-- Place this tag where you want the share button to render. -->
+                     <div class="g-plus" data-action="share" data-annotation="vertical-bubble" data-height="60"></div>
+
+                     <!-- Place this tag after the last share tag. -->
+                     <script type="text/javascript">
+                       (function() {
+                         var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                         po.src = 'https://apis.google.com/js/plusone.js';
+                         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                       })();
+                     </script>
+                 </div>       
+                                         </div>
+                         <div id="respond" class="left">
+                             <h3 id="reply-title" clas="heading">
+                                <?php comment_form_title( $args['title_reply'], $args['title_reply_to'] ); ?> 
+                                <small><?php cancel_comment_reply_link( $args['cancel_reply_link'] ); ?></small>
+                             </h3>
                                  <?php if ( get_option( 'comment_registration' ) && !is_user_logged_in() ) : ?>
                                          <?php echo $args['must_log_in']; ?>
                                          <?php do_action( 'comment_form_must_log_in_after' ); ?>
                                  <?php else : ?>
-                                         <form action="<?php echo site_url( '/wp-comments-post.php' ); ?>" method="post" id="<?php echo esc_attr( $args['id_form'] ); ?>">
-                                                 <?php do_action( 'comment_form_top' ); ?>
-                                                 <?php if ( is_user_logged_in() ) : ?>
-                                                         <?php echo apply_filters( 'comment_form_logged_in', $args['logged_in_as'], $commenter, $user_identity ); ?>
-                                                         <?php do_action( 'comment_form_logged_in_after', $commenter, $user_identity ); ?>
+                            <form action="<?php echo site_url( '/wp-comments-post.php' ); ?>" method="post" id="<?php echo esc_attr( $args['id_form'] ); ?>">
+                                <?php do_action( 'comment_form_top' ); ?>
+                                    <?php if ( is_user_logged_in() ) : ?>
+                                        <?php echo apply_filters( 'comment_form_logged_in', $args['logged_in_as'], $commenter, $user_identity ); ?>
+                                        <?php do_action( 'comment_form_logged_in_after', $commenter, $user_identity ); ?>
                                                  <?php else : ?>
                                                          <?php echo $args['comment_notes_before']; ?>
                                                          <?php
@@ -208,15 +238,14 @@ function ollo_comment_form( $args = array(), $post_id = null ) {
                                                  <?php endif; ?>
                                                  <?php echo apply_filters( 'comment_form_field_comment', $args['comment_field'] ); ?>
                                                  <?php echo $args['comment_notes_after']; ?>
-                                                 <p class="form-submit">
-                                                         <input name="submit" type="submit" id="<?php echo esc_attr( $args['id_submit'] ); ?>" class="<?php echo esc_attr( $args['class_submit'] ); ?>" value="<?php echo esc_attr( $args['label_submit'] ); ?>" />
+                                    <p class="form-submit">
+                                        <input name="submit" type="submit" id="<?php echo esc_attr( $args['id_submit'] ); ?>" class="<?php echo esc_attr( $args['class_submit'] ); ?>" value="<?php echo esc_attr( $args['label_submit'] ); ?>" />
                                                          <?php comment_id_fields(); ?>
-                                                 </p>
-                                                 <?php do_action( 'comment_form', $post_id ); ?>
-                                         </form>
+                                    </p>
+                                    <?php do_action( 'comment_form', $post_id ); ?>
+                            </form>
                                  <?php endif; ?>
                          </div><!-- #respond -->
-                    </div><!-- conatiner -->
                          <?php do_action( 'comment_form_after' ); ?>
                  <?php else : ?>
                          <?php do_action( 'comment_form_comments_closed' ); ?>

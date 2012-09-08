@@ -23,7 +23,7 @@
     	wp_head();
     ?>
 </head>
-<body id="<?php echo basename(get_permalink()); ?>" onload="prettyPrint();">
+<body id="<?php echo basename(get_permalink()); ?>">
 
 	<div id="access" role="navigation" class="navbar navbar-fixed-top">
 	    <div class="navbar-inner">

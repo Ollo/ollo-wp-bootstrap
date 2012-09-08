@@ -308,11 +308,26 @@ margin-top:25px;
 }
 /* comment styles 
 ===================*/
-#respond {
+#comments { 
 	background:#ddd;
 	padding:20px;
 	border-radius:7px;
 	border:1px solid #a3a3a3;
+	margin-left:0;
+}
+
+#respond {
+	
+}
+
+#post-share {
+	
+}
+#post-share div {
+	padding:0 5px;
+}
+#post-share .heading {
+	padding-bottom:10px;
 }
 .required {
 	color:#ff0000;
@@ -326,7 +341,7 @@ margin-top:25px;
 }
 
 /* defaults :/ */
-#comments { margin-left:0;}
+
 ul.commentlist { margin:0;}
 ul.commentlist li { list-style:none; margin:20px 0; padding:20px; border-radius:5px; box-shadow:1px 2px 1px 1px #a3a3a3;}
 ul.commentlist li.alt {}
