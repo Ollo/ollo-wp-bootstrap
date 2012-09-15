@@ -278,9 +278,9 @@ h1 {
 .wpContent {
 	padding:20px 0;
 }
-.wpContent img.left {
+/*.wpContent img.left {
 	padding:0 20px 20px 0;
-}
+}*/
 .wpContent h2, h3 {
 	display:block;
 }
@@ -441,3 +441,11 @@ ul.commentlist li.thread-odd {}
 	outline:0;
 	border: 1px solid #a3a3a3;	
 }
+
+/* Better styles for embedding GitHub Gists */
+.gist{font-size:13px;line-height:18px;margin-bottom:20px;width:100%}
+.gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}
+.gist-meta{font-family:Helvetica,Arial,sans-serif;font-size:13px !important}
+.gist-meta a{color:#666 !important;text-decoration:none}
+.gist-meta a:hover{color:#999 !important}
+

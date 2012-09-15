@@ -16,7 +16,7 @@ get_header(); ?>
     	    <h4 class="heading left">Tagged in:</h4>
     	    <?php the_tags('<ul><li class="label">','</li><li class="label">','</li></ul>'); ?>
         </div>
-        <div class="wpContent">
+        <div class="wpContent clearfix">
             <?php the_content(); ?>
         </div>
             <hr />
