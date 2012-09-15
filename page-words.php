@@ -13,6 +13,22 @@ get_header();
                 	the_content();
                 endwhile; wp_reset_query(); ?>
             </div>
+            <div class="tagNav">
+                <h3 class="heading">I usually post about these topics:</h3>
+                <?php
+                    $args = array(
+                        'smallest'      => '15',
+                        'largest'       => '15',
+                        'unit'          => 'px',
+                        'link'          => 'view',
+                        'separator'     => ', ' 
+                    )
+                
+                ?>
+                
+                <?php wp_tag_cloud( $args ); ?>
+            </div>    
+            <hr />
             
             <div id="blogFeed">
                  <?php

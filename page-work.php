@@ -19,7 +19,7 @@ get_header();
                     $args = array(
                         'post_count' => 12,
                         'post_type' => 'portfolio',
-                        'order'   => 'ASC'
+                        'order'   => 'DESC'
                     );
                     $workPage_query = new WP_Query( $args );
                     while ( $workPage_query->have_posts() ) : $workPage_query->the_post(); ?>
