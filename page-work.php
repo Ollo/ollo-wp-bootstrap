@@ -18,7 +18,8 @@ get_header();
                     // args for the portfolio query 
                     $args = array(
                         'post_count' => 12,
-                        'post_type' => 'portfolio'
+                        'post_type' => 'portfolio',
+                        'order'   => 'ASC'
                     );
                     $workPage_query = new WP_Query( $args );
                     while ( $workPage_query->have_posts() ) : $workPage_query->the_post(); ?>

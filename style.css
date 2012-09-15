@@ -249,6 +249,8 @@ h1 {
 }
 .workSingle {
 	padding:0;
+	height:250px;
+	margin-bottom:20px;
 }
 .workTitle { padding-left:25px; }
 .workThumb img {
