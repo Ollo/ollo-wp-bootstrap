@@ -248,11 +248,12 @@ h1 {
 	margin: 0 0 20px 0;
 }
 .workSingle {
-	padding:0;
+	padding:0 15px 0 0;
 	height:250px;
 	margin-bottom:20px;
 }
-.workTitle { padding-left:25px; }
+.workSingle .featuredImgL { margin-left:0}
+.workTitle { }
 .workThumb img {
 	border:5px solid #ececec;
 }
