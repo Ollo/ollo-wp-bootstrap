@@ -19,6 +19,8 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    
     <?php
     	wp_head();
     ?>
