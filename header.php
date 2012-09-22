@@ -16,8 +16,8 @@
     <link rel="profile" href="http://gmpg.org/xfn/11" />
 
     <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     
