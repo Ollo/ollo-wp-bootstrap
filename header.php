@@ -11,6 +11,7 @@
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="msvalidate.01" content="EBF4239AED0E999C24FFA31135708BC2" />
     <title> <?php wp_title( '|', true, 'right' ); ?> </title>
 
     <link rel="profile" href="http://gmpg.org/xfn/11" />
