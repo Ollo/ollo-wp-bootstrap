@@ -45,7 +45,7 @@ get_header(); ?>
             </div>
         </div>
     <div class="clearfix">        
-        <div class="left">
+        <div>
 		    <?php comments_template( '', true ); ?>
         </div>
         
